@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web Dev Resource</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webDevRes.css">
+    <script src="https://cdn.jsdelivr.net/npm/fuzzysort@3.1.0/fuzzysort.min.js"></script>
+</head>
+
+<body>
+    <section class="data-control">
+        <h1>Web Dev Resources</h1>
+        <input type="text" name="fuzzysort" id="fuzzysortInput" aria-label="Search data">
+    </section>
+    <ul id="dataUl" class="data-container"></ul>
+    <script>
+        const dataUl = document.getElementById('dataUl');
+        const data = [
+            {
+                "title": "Squiffy - A simple way to write interactive fiction",
+                "description": "",
+                "createdAt": "2025-11-20T00:52:11.210Z",
+                "creationDate": "2025-11-19 19:52",
+                "tags": "Tool, CreativeOutlet",
+                "previewImage": "",
+                "url": "https://textadventures.co.uk/squiffy",
+                "iframeUrl": "",
+                "domain": "textadventures.co.uk",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/a36c72ed-108b-403b-8e33-318e95fd1cd3"
+            },
+            {
+                "title": "GitHub - bradtraversy/design-resources-for-developers: Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI li...",
+                "description": "Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and much more - bradtraversy/design-reso...",
+                "createdAt": "2025-11-20T00:45:57.850Z",
+                "creationDate": "2025-11-19 19:45",
+                "tags": "MEGALIST, Graphics, Tool, Fonts, Customize, Snippets, CreativeOutlet",
+                "previewImage": "",
+                "url": "https://github.com/bradtraversy/design-resources-for-developers?tab=readme-ov-file#html--css-templates",
+                "iframeUrl": "",
+                "domain": "github.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/06bccdc0-6b47-48f9-a0a6-3915e5c33f00"
+            },
+            {
+                "title": "The Frugal Gamer . Net Links",
+                "description": "My personal web canvas, a showcase for my art, projects, ideas, thoughts, and links to other favorite places on the small web",
+                "createdAt": "2025-11-20T00:43:40.319Z",
+                "creationDate": "2025-11-19 19:43",
+                "tags": "Masterlist, Graphics, Customize",
+                "previewImage": "Untitled",
+                "url": "https://www.thefrugalgamer.net/links.php",
+                "iframeUrl": "",
+                "domain": "www.thefrugalgamer.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/5141d5ec-e13e-4f4e-96ec-fe813291d6f7"
+            },
+            {
+                "title": "Frugal’s Free Images Database",
+                "description": "",
+                "createdAt": "2025-11-20T00:37:39.624Z",
+                "creationDate": "2025-11-19 19:37",
+                "tags": "Free, Graphics, art",
+                "previewImage": "Untitled",
+                "url": "https://www.thefrugalgamer.net/freeimages/",
+                "iframeUrl": "",
+                "domain": "www.thefrugalgamer.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/003dd147-f0b4-469b-a42c-2c18f9bdec7d"
+            },
+            {
+                "title": "The Frugal Gamer . Net",
+                "description": "My personal web canvas, a showcase for my art, projects, ideas, thoughts, and links to other favorite places on the small web",
+                "createdAt": "2025-11-20T00:33:04.526Z",
+                "creationDate": "2025-11-19 19:33",
+                "tags": "Patterns, Graphics, Fonts, art",
+                "previewImage": "Untitled",
+                "url": "https://www.thefrugalgamer.net/resources.php",
+                "iframeUrl": "",
+                "domain": "www.thefrugalgamer.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/e43dcabf-79d8-4336-8ca2-8cccd47bd584"
+            },
+            {
+                "title": "increment",
+                "description": "",
+                "createdAt": "2025-11-20T00:30:46.460Z",
+                "creationDate": "2025-11-19 19:30",
+                "tags": "Widgets, Audio",
+                "previewImage": "Untitled",
+                "url": "https://incr.easrng.net/",
+                "iframeUrl": "",
+                "domain": "incr.easrng.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/3f78988f-3651-4545-9c79-2c4ee29a35b1"
+            },
+            {
+                "title": "GitHub - biancarosa/lastfm-last-played: Little lastfm widget to show your latest songs on your personal website.",
+                "description": "Little lastfm widget to show your latest songs on your personal website. - biancarosa/lastfm-last-played",
+                "createdAt": "2025-11-20T00:29:11.040Z",
+                "creationDate": "2025-11-19 19:29",
+                "tags": "Widgets, Snippets, Audio",
+                "previewImage": "",
+                "url": "https://github.com/biancarosa/lastfm-last-played",
+                "iframeUrl": "",
+                "domain": "github.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/31cf456c-cc07-477a-b64f-0705b1cdfe79"
+            },
+            {
+                "title": "tamanotchi.world | Welcome to tamaNOTchi! - Population: 27587",
+                "description": "Create and customize clickable growing pets at tamanotchi.world!",
+                "createdAt": "2025-11-20T00:25:12.945Z",
+                "creationDate": "2025-11-19 19:25",
+                "tags": "Widgets",
+                "previewImage": "Untitled",
+                "url": "https://tamanotchi.world/",
+                "iframeUrl": "",
+                "domain": "tamanotchi.world",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/dac25ab0-328d-49f0-814b-4fa8beb3afa9"
+            },
+            {
+                "title": "Create a free poll - Instant & easy. No sign up | Pollcode",
+                "description": "",
+                "createdAt": "2025-11-20T00:23:19.546Z",
+                "creationDate": "2025-11-19 19:23",
+                "tags": "Snippets, Widgets",
+                "previewImage": "",
+                "url": "https://pollcode.com/",
+                "iframeUrl": "",
+                "domain": "pollcode.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/c077e23f-ce23-4de5-ac96-4574d6acc2dd"
+            },
+            {
+                "title": "Free Quiz Scripts",
+                "description": "Free Quiz Scripts",
+                "createdAt": "2025-11-20T00:22:19.238Z",
+                "creationDate": "2025-11-19 19:22",
+                "tags": "Snippets, Widgets",
+                "previewImage": "Untitled",
+                "url": "https://www.dragonflycave.com/free-quiz-scripts",
+                "iframeUrl": "",
+                "domain": "www.dragonflycave.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/1f7d5911-edb0-41f1-aeec-ae845dcb9be2"
+            },
+            {
+                "title": "Codez n Layouts!!! » stupied stuff!",
+                "description": "A page to share code I’ve made",
+                "createdAt": "2025-11-20T00:20:13.079Z",
+                "creationDate": "2025-11-19 19:20",
+                "tags": "Snippets",
+                "previewImage": "Untitled",
+                "url": "https://stupied.nekoweb.org/code/",
+                "iframeUrl": "",
+                "domain": "stupied.nekoweb.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/2dd5ff8b-a220-45dc-b4e8-bfb9a97650b9"
+            },
+            {
+                "title": "Freefrontend CSS code examples",
+                "description": "",
+                "createdAt": "2025-11-19T23:50:18.970Z",
+                "creationDate": "2025-11-19 18:50",
+                "tags": "Effects, Snippets, Customize, Masterlist, TaughtMeSomething",
+                "previewImage": "",
+                "url": "https://freefrontend.com/css-code-examples/",
+                "iframeUrl": "",
+                "domain": "freefrontend.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/df3fc01b-4fe0-40ad-a64e-e90e89ffdea1"
+            },
+            {
+                "title": "code snippets",
+                "description": "",
+                "createdAt": "2025-11-19T23:47:59.145Z",
+                "creationDate": "2025-11-19 18:47",
+                "tags": "Effects, Snippets",
+                "previewImage": "",
+                "url": "https://slowslushie.nekoweb.org/snippets/codesnippets",
+                "iframeUrl": "",
+                "domain": "slowslushie.nekoweb.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/587c19e2-47b3-40f5-a302-9f47b1869e58"
+            },
+            {
+                "title": "GitHub - CerryTsuki/CerisePlayer: A simple jQuery/HTML audio player, designed for Neocities websites.",
+                "description": "A simple jQuery/HTML audio player, designed for Neocities websites. - CerryTsuki/CerisePlayer",
+                "createdAt": "2025-11-19T23:46:36.062Z",
+                "creationDate": "2025-11-19 18:46",
+                "tags": "Widgets, Audio",
+                "previewImage": "",
+                "url": "https://github.com/CerryTsuki/CerisePlayer",
+                "iframeUrl": "",
+                "domain": "github.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/98de49ba-8692-4548-a4a8-ee07e89ba3a2"
+            },
+            {
+                "title": "monsieur music player",
+                "description": "",
+                "createdAt": "2025-11-19T23:45:28.803Z",
+                "creationDate": "2025-11-19 18:45",
+                "tags": "Widgets, Audio",
+                "previewImage": "Untitled",
+                "url": "https://monsieurdoll.neocities.org/monsieurmusicplayer",
+                "iframeUrl": "",
+                "domain": "monsieurdoll.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/a7c8ace3-b091-4133-9f78-86dc89909e2c"
+            },
+            {
+                "title": "YAY CUSTOM CURSORS",
+                "description": "",
+                "createdAt": "2025-11-19T23:37:58.216Z",
+                "creationDate": "2025-11-19 18:37",
+                "tags": "Snippets, Cursor",
+                "previewImage": "",
+                "url": "https://taptroupe.neocities.org/cursorhowto",
+                "iframeUrl": "",
+                "domain": "taptroupe.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/9bc5d8bf-e68e-4f3a-847f-2b5275e9108f"
+            },
+            {
+                "title": "codepen scrolling marquee",
+                "description": "",
+                "createdAt": "2025-11-19T23:36:35.184Z",
+                "creationDate": "2025-11-19 18:36",
+                "tags": "Snippets",
+                "previewImage": "",
+                "url": "https://codepen.io/sadness97/pen/BaQbJQb",
+                "iframeUrl": "",
+                "domain": "codepen.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/93bec53c-d56c-465e-a415-42e3be59f868"
+            },
+            {
+                "title": "coco’s pixel safari",
+                "description": "A collection of new and old graphics. Good to decorate your site with :)",
+                "createdAt": "2025-11-19T23:12:28.404Z",
+                "creationDate": "2025-11-19 18:12",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://pixelsafari.neocities.org/",
+                "iframeUrl": "",
+                "domain": "pixelsafari.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/2b600b1d-1329-4a50-8ae9-f37127617d7e"
+            },
+            {
+                "title": "Decker by Internet Janitor",
+                "description": "A multimedia sketchbook",
+                "createdAt": "2025-11-19T23:09:12.592Z",
+                "creationDate": "2025-11-19 18:09",
+                "tags": "Tool, CreativeOutlet, Graphics",
+                "previewImage": "Untitled",
+                "url": "https://internet-janitor.itch.io/decker",
+                "iframeUrl": "",
+                "domain": "internet-janitor.itch.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/1b5fba30-2a25-41a5-a300-ffed96467c0e"
+            },
+            {
+                "title": "flicksy by candle",
+                "description": "a tool for drawing and assembling graphical hypertext games",
+                "createdAt": "2025-11-19T22:59:31.189Z",
+                "creationDate": "2025-11-19 17:59",
+                "tags": "GameEngine",
+                "previewImage": "Untitled",
+                "url": "https://candle.itch.io/flicksy",
+                "iframeUrl": "",
+                "domain": "candle.itch.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/6a530d41-54cd-42cb-b9ab-6d624fc2cec8"
+            },
+            {
+                "title": "GitHub - benjamminf/warpjs: Warp, distort, bend, twist and smudge your SVG’s directly in the browser",
+                "description": "Warp, distort, bend, twist and smudge your SVG’s directly in the browser - benjamminf/warpjs",
+                "createdAt": "2025-11-19T22:37:16.913Z",
+                "creationDate": "2025-11-19 17:37",
+                "tags": "Tool",
+                "previewImage": "",
+                "url": "https://github.com/benjamminf/warpjs",
+                "iframeUrl": "",
+                "domain": "github.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/56ea31d0-48df-495a-b3fc-931b0fb4e890"
+            },
+            {
+                "title": "GitHub - bradtraversy/design-resources-for-developers: Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI li...",
+                "description": "Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and much more - bradtraversy/design-reso...",
+                "createdAt": "2025-11-19T22:06:14.650Z",
+                "creationDate": "2025-11-19 17:06",
+                "tags": "Tool, CreativeOutlet, Graphics, MEGALIST, Snippets",
+                "previewImage": "",
+                "url": "https://github.com/bradtraversy/design-resources-for-developers#html--css-templates",
+                "iframeUrl": "",
+                "domain": "github.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/5a713c0e-b5b3-41c0-a2d8-d3f15a65a479"
+            },
+            {
+                "title": "free fonts for commercial use - mister chad",
+                "description": "free fonts for commercial use - mister chad",
+                "createdAt": "2025-11-19T22:04:31.812Z",
+                "creationDate": "2025-11-19 17:04",
+                "tags": "Fonts",
+                "previewImage": "",
+                "url": "https://mister-chad.com/graphic+design+resources/free+fonts+for+commercial+use",
+                "iframeUrl": "",
+                "domain": "mister-chad.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/17f535b6-0deb-491f-9385-bb5af8085f75"
+            },
+            {
+                "title": "Bekianee",
+                "description": "Art, mini-blog, weirdcore live from a CRT t.v. from Mars",
+                "createdAt": "2025-11-19T22:03:27.533Z",
+                "creationDate": "2025-11-19 17:03",
+                "tags": "Masterlist, TaughtMeSomething",
+                "previewImage": "Untitled",
+                "url": "https://bekianee.art/bookmarks.html",
+                "iframeUrl": "",
+                "domain": "bekianee.art",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/6d82386a-ce21-457b-8489-9bc8f278408c"
+            },
+            {
+                "title": "resources !",
+                "description": "",
+                "createdAt": "2025-11-19T21:58:39.102Z",
+                "creationDate": "2025-11-19 16:58",
+                "tags": "Masterlist, Graphics, Tool",
+                "previewImage": "",
+                "url": "https://slowslushie.nekoweb.org/resource",
+                "iframeUrl": "",
+                "domain": "slowslushie.nekoweb.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/5b96cba2-b7c3-4d90-ba8a-07022552d9fe"
+            },
+            {
+                "title": "petrapixel",
+                "description": "Welcome to petrapixel! Here you can find many resources for Neocities, coding help, media recommendations and more in a cute Old Web aesthetic!",
+                "createdAt": "2025-11-19T21:56:47.879Z",
+                "creationDate": "2025-11-19 16:56",
+                "tags": "Masterlist, Tool, Snippets, Graphics, Fonts, Customize, Widgets",
+                "previewImage": "",
+                "url": "https://petrapixel.neocities.org/",
+                "iframeUrl": "",
+                "domain": "petrapixel.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/6a3aa27f-4f44-47c5-ad22-940c12c2ecb7"
+            },
+            {
+                "title": "loveberry ♡ home",
+                "description": "loveberry - your home for website resources",
+                "createdAt": "2025-11-19T21:55:17.768Z",
+                "creationDate": "2025-11-19 16:55",
+                "tags": "Masterlist, Effects, Snippets, Patterns",
+                "previewImage": "",
+                "url": "https://loveberry.nekoweb.org/",
+                "iframeUrl": "",
+                "domain": "loveberry.nekoweb.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/ad055fa6-eb29-4745-b43b-2d2e9d270d4b"
+            },
+            {
+                "title": "codepen tag sorting",
+                "description": "",
+                "createdAt": "2025-11-19T21:53:49.415Z",
+                "creationDate": "2025-11-19 16:53",
+                "tags": "Masterlist, Tool",
+                "previewImage": "",
+                "url": "https://codepen.io/sadness97/pen/ZEegGvd",
+                "iframeUrl": "",
+                "domain": "codepen.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/c939e3c9-87a8-47bd-b443-9f8bda6577a9"
+            },
+            {
+                "title": "Materials",
+                "description": "Jasminnie",
+                "createdAt": "2025-11-19T21:52:40.670Z",
+                "creationDate": "2025-11-19 16:52",
+                "tags": "Graphics, Patterns, Cursor",
+                "previewImage": "Untitled",
+                "url": "https://jasminnie.weebly.com/materials.html",
+                "iframeUrl": "",
+                "domain": "jasminnie.weebly.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/407413dd-5918-459a-8209-a4b9eb49dda7"
+            },
+            {
+                "title": "tom2.org ǂłǎTCYCXgW",
+                "description": "",
+                "createdAt": "2025-11-19T21:50:57.682Z",
+                "creationDate": "2025-11-19 16:50",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://tom2.org/tom/Kabegami.htm",
+                "iframeUrl": "",
+                "domain": "tom2.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/cb7b7d12-728c-4ac3-9b23-dd86cfbf89e5"
+            },
+            {
+                "title": "codepen tiled backgrounds",
+                "description": "",
+                "createdAt": "2025-11-19T21:48:28.978Z",
+                "creationDate": "2025-11-19 16:48",
+                "tags": "Patterns",
+                "previewImage": "",
+                "url": "https://codepen.io/sadness97/full/dPoEqNN",
+                "iframeUrl": "",
+                "domain": "codepen.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/9ff95191-d2da-44fe-bd32-d6f32811ada5"
+            },
+            {
+                "title": "The Front Bumper - IntenetBumperStickers.com",
+                "description": "Where new Internet Bumper Stickers® arrive each weekday.",
+                "createdAt": "2025-11-19T21:45:17.836Z",
+                "creationDate": "2025-11-19 16:45",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://www.internetbumperstickers.com/frontbumper/",
+                "iframeUrl": "",
+                "domain": "www.internetbumperstickers.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/42b6cf66-dfe0-4a7b-8eec-5fa25ec3ef1c"
+            },
+            {
+                "title": "99GIF shop",
+                "description": "",
+                "createdAt": "2025-11-19T21:44:19.081Z",
+                "creationDate": "2025-11-19 16:44",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://99gifshop.neocities.org/items/1/",
+                "iframeUrl": "",
+                "domain": "99gifshop.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/05c72a60-86c0-4888-a555-04a9814e2900"
+            },
+            {
+                "title": "Glitter Graphics",
+                "description": "The community for graphics enthusiasts!",
+                "createdAt": "2025-11-19T21:42:47.057Z",
+                "creationDate": "2025-11-19 16:42",
+                "tags": "Graphics, Fonts, Customize, Effects, Patterns",
+                "previewImage": "",
+                "url": "https://www.glitter-graphics.com/",
+                "iframeUrl": "",
+                "domain": "www.glitter-graphics.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/3e4d43e1-40c4-4c1f-bf37-154ded4ffe60"
+            },
+            {
+                "title": "GifCities",
+                "description": "",
+                "createdAt": "2025-11-19T21:42:13.744Z",
+                "creationDate": "2025-11-19 16:42",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://gifcities.org/",
+                "iframeUrl": "",
+                "domain": "gifcities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/cb077ea8-89a4-49ad-b0da-80f7be2fc259"
+            },
+            {
+                "title": "The Corporation",
+                "description": "The Corporation: Creating fresh modern humor product since the turn of the century.",
+                "createdAt": "2025-11-19T21:41:39.789Z",
+                "creationDate": "2025-11-19 16:41",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://thecorporation.neocities.org/",
+                "iframeUrl": "",
+                "domain": "thecorporation.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/d769b2c0-6c82-4c0b-85cd-b926f8f953b1"
+            },
+            {
+                "title": "Transparent Textures",
+                "description": "",
+                "createdAt": "2025-11-19T21:40:56.014Z",
+                "creationDate": "2025-11-19 16:40",
+                "tags": "Customize, Patterns, Tool",
+                "previewImage": "",
+                "url": "https://www.transparenttextures.com/",
+                "iframeUrl": "",
+                "domain": "www.transparenttextures.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/78cbf9a0-6214-406f-b372-4309c43493cb"
+            },
+            {
+                "title": "broider",
+                "description": "",
+                "createdAt": "2025-11-19T21:40:13.185Z",
+                "creationDate": "2025-11-19 16:40",
+                "tags": "CreativeOutlet, Customize, Graphics, Tool, Free",
+                "previewImage": "",
+                "url": "https://maxbittker.github.io/broider/",
+                "iframeUrl": "",
+                "domain": "maxbittker.github.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/87397fa2-25e1-4672-b4b3-7d18aeb8e7bb"
+            },
+            {
+                "title": "Repeater: For all your tiled background image cropping needs.",
+                "description": "Make repeating image patterns easily by viewing the tiled result as you crop, so you can spot where to adjust the dimensions.",
+                "createdAt": "2025-11-19T21:39:32.794Z",
+                "creationDate": "2025-11-19 16:39",
+                "tags": "Patterns, Tool",
+                "previewImage": "Untitled",
+                "url": "https://www.richardwestenra.com/repeater/",
+                "iframeUrl": "",
+                "domain": "www.richardwestenra.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/0a75faa9-8cde-4c02-8453-c31bcc4d0c2e"
+            },
+            {
+                "title": "Border-image generator - CSS | MDN",
+                "description": "This tool can be used to generate CSS border-image values.",
+                "createdAt": "2025-11-19T21:37:41.932Z",
+                "creationDate": "2025-11-19 16:37",
+                "tags": "Tool, Customize, Graphics, Free",
+                "previewImage": "",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator",
+                "iframeUrl": "",
+                "domain": "developer.mozilla.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/17398f1e-2b93-4d95-9389-14fd21c51a67"
+            },
+            {
+                "title": "Animated gif tools",
+                "description": "Easy to use online animated GIF maker and image editor. Create, convert, crop, resize, reverse, optimize animated GIF, WebP, APNG files, images and vi...",
+                "createdAt": "2025-11-19T21:36:35.101Z",
+                "creationDate": "2025-11-19 16:36",
+                "tags": "Graphics, CreativeOutlet, Customize, Free, Tool",
+                "previewImage": "Untitled",
+                "url": "https://ezgif.com/",
+                "iframeUrl": "",
+                "domain": "ezgif.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/a448eaa1-b897-46c0-a61f-0415e324d0b9"
+            },
+            {
+                "title": "meows.zip",
+                "description": "",
+                "createdAt": "2025-11-19T21:32:51.454Z",
+                "creationDate": "2025-11-19 16:32",
+                "tags": "Widgets, Masterlist, Tool, Audio",
+                "previewImage": "Untitled",
+                "url": "https://meows.zip/?ref=dimden",
+                "iframeUrl": "",
+                "domain": "meows.zip",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/5e9f7b3c-0050-4559-b0b2-72896610fae2"
+            },
+            {
+                "title": "Web Badges World | The ultimate archive of 80x15 pixel button art",
+                "description": "",
+                "createdAt": "2025-11-19T21:30:43.312Z",
+                "creationDate": "2025-11-19 16:30",
+                "tags": "MEGALIST, Graphics",
+                "previewImage": "Untitled",
+                "url": "https://web.badges.world/",
+                "iframeUrl": "",
+                "domain": "web.badges.world",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/12cc79d6-9730-47b0-bdb5-ec2408be58fa"
+            },
+            {
+                "title": "Free Broken Link Checking Tool",
+                "description": "Check for broken links on your website with our free online tool. Sign up and schedule automatic checks to keep your website fresh and up to date.",
+                "createdAt": "2025-11-19T21:25:52.373Z",
+                "creationDate": "2025-11-19 16:25",
+                "tags": "Tool",
+                "previewImage": "Untitled",
+                "url": "https://www.deadlinkchecker.com/website-dead-link-checker.asp",
+                "iframeUrl": "",
+                "domain": "www.deadlinkchecker.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/533fe3fd-3825-4fe5-8327-8108723254ba"
+            },
+            {
+                "title": "Chattable",
+                "description": "Easily integrate your own live group chat into your site using a simple iframe and script element. Engage with visitors, build your community, and enh...",
+                "createdAt": "2025-11-19T21:25:28.571Z",
+                "creationDate": "2025-11-19 16:25",
+                "tags": "Widgets",
+                "previewImage": "",
+                "url": "https://iframe.chat/",
+                "iframeUrl": "",
+                "domain": "iframe.chat",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/b0fd7ce1-85be-4af5-8a33-9e204da5f8f0"
+            },
+            {
+                "title": "TK’S FREE SOUND FX",
+                "description": "Free 1800 sound effects from Japan",
+                "createdAt": "2025-11-19T21:24:34.829Z",
+                "creationDate": "2025-11-19 16:24",
+                "tags": "Tool, Free, Audio",
+                "previewImage": "",
+                "url": "https://taira-komori.net/freesounden.html",
+                "iframeUrl": "",
+                "domain": "taira-komori.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/96d03172-c6e5-4791-ba85-789e95f46b4b"
+            },
+            {
+                "title": "Webdevin' (frontend) resources",
+                "description": "",
+                "createdAt": "2025-11-19T21:22:36.795Z",
+                "creationDate": "2025-11-19 16:22",
+                "tags": "CreativeOutlet, Tool, Graphics, Snippets, Customize, Masterlist, Widgets",
+                "previewImage": "",
+                "url": "https://webdevin.html-5.me/?i=1",
+                "iframeUrl": "",
+                "domain": "webdevin.html-5.me",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/fa340aef-c2f0-476c-a264-a8219a9f807f"
+            },
+            {
+                "title": "Tiny Tools Directory",
+                "description": "A list of small, free, or experimental tools towards joyful digital creation.",
+                "createdAt": "2025-11-19T21:21:57.343Z",
+                "creationDate": "2025-11-19 16:21",
+                "tags": "Tool, MEGALIST",
+                "previewImage": "Untitled",
+                "url": "https://tinytools.directory/",
+                "iframeUrl": "",
+                "domain": "tinytools.directory",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/f7639df2-ccc6-426b-a570-0b9bc1e0b728"
+            },
+            {
+                "title": "Lukas’ Resources",
+                "description": "Some stuff you may found useful.",
+                "createdAt": "2025-11-19T21:18:00.092Z",
+                "creationDate": "2025-11-19 16:18",
+                "tags": "Masterlist, Tool, Graphics, Widgets, Snippets, Effects, Patterns, Customize",
+                "previewImage": "Untitled",
+                "url": "https://lukasworkshop.nekoweb.org/resources",
+                "iframeUrl": "",
+                "domain": "lukasworkshop.nekoweb.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/d4956810-6dbc-445e-b78c-059530c6dc19"
+            },
+            {
+                "title": "ιcнιɢσ ∂ιяɛcтσяʏ 🍓 Web Materials",
+                "description": "",
+                "createdAt": "2025-11-19T21:13:33.182Z",
+                "creationDate": "2025-11-19 16:13",
+                "tags": "Graphics, Fonts, Customize, Patterns, Widgets",
+                "previewImage": "Untitled",
+                "url": "https://directory.cinni.net/sozai/",
+                "iframeUrl": "",
+                "domain": "directory.cinni.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/350c9630-b6a8-42c2-b3a1-88c38402c4b4"
+            },
+            {
+                "title": "ιcнιɢσ ∂ιяɛcтσяʏ 🍓Link Directory",
+                "description": "",
+                "createdAt": "2025-11-19T21:11:59.543Z",
+                "creationDate": "2025-11-19 16:11",
+                "tags": "Graphics, Customize, Fonts, Masterlist, Patterns",
+                "previewImage": "Untitled",
+                "url": "https://directory.cinni.net/sozai/",
+                "iframeUrl": "",
+                "domain": "directory.cinni.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/0f289df8-5d42-4857-ac0b-a3cbc6e46129"
+            },
+            {
+                "title": "W reading on sadgirl's part",
+                "description": "",
+                "createdAt": "2025-11-19T21:10:14.734Z",
+                "creationDate": "2025-11-19 16:10",
+                "tags": "TaughtMeSomething",
+                "previewImage": "Untitled",
+                "url": "https://sadgrl.online/links/",
+                "iframeUrl": "",
+                "domain": "sadgrl.online",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/65bbdf84-4dab-4a7a-8d1c-b64ab4205148"
+            },
+            {
+                "title": "Guides",
+                "description": "",
+                "createdAt": "2025-11-19T21:09:21.812Z",
+                "creationDate": "2025-11-19 16:09",
+                "tags": "TaughtMeSomething",
+                "previewImage": "Untitled",
+                "url": "https://sadgrl.online/guides/",
+                "iframeUrl": "",
+                "domain": "sadgrl.online",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/1a8f066f-b382-4278-94d3-367e67176e99"
+            },
+            {
+                "title": "Resources",
+                "description": "",
+                "createdAt": "2025-11-19T21:08:05.033Z",
+                "creationDate": "2025-11-19 16:08",
+                "tags": "Effects, Snippets, Fonts, Masterlist, Patterns",
+                "previewImage": "Untitled",
+                "url": "https://sadgrl.online/resources/",
+                "iframeUrl": "",
+                "domain": "sadgrl.online",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/76947b94-820e-46e4-b5ad-bdbcc63546ce"
+            },
+            {
+                "title": "Want to make a website?",
+                "description": "",
+                "createdAt": "2025-11-19T21:06:35.922Z",
+                "creationDate": "2025-11-19 16:06",
+                "tags": "Masterlist, Graphics, Fonts, Effects, Widgets",
+                "previewImage": "",
+                "url": "https://webmastering.neocities.org/",
+                "iframeUrl": "",
+                "domain": "webmastering.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/da585401-4320-47ee-ac10-9e2a1f2cab19"
+            },
+            {
+                "title": "codepen.io audio player",
+                "description": "",
+                "createdAt": "2025-11-19T21:04:52.560Z",
+                "creationDate": "2025-11-19 16:04",
+                "tags": "Widgets, Audio",
+                "previewImage": "",
+                "url": "https://codepen.io/coothead/pen/RwNgGBO",
+                "iframeUrl": "",
+                "domain": "codepen.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/293131d0-ffc4-4279-a308-8f98b881d265"
+            },
+            {
+                "title": "DRAWBOX",
+                "description": "",
+                "createdAt": "2025-11-19T21:02:55.310Z",
+                "creationDate": "2025-11-19 16:02",
+                "tags": "Widgets",
+                "previewImage": "",
+                "url": "https://drawbox.nekoweb.org/",
+                "iframeUrl": "",
+                "domain": "drawbox.nekoweb.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/7a0af02f-32b4-43d2-93ce-a3e39698f3a7"
+            },
+            {
+                "title": "Setting up a screen reader testing environment on your computer",
+                "description": "— The personal website of Sara Soueidan, inclusive Web UI engineer",
+                "createdAt": "2025-11-19T21:01:45.987Z",
+                "creationDate": "2025-11-19 16:01",
+                "tags": "Tool, TaughtMeSomething",
+                "previewImage": "Untitled",
+                "url": "https://www.sarasoueidan.com/blog/testing-environment-setup/",
+                "iframeUrl": "",
+                "domain": "www.sarasoueidan.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/0ef5cfce-09d0-4ef2-ae07-48573705a0f4"
+            },
+            {
+                "title": "Blinkie Makers!",
+                "description": "",
+                "createdAt": "2025-11-19T21:00:29.811Z",
+                "creationDate": "2025-11-19 16:00",
+                "tags": "Graphics, Customize",
+                "previewImage": "Untitled",
+                "url": "https://blinkie.suppi.net/",
+                "iframeUrl": "",
+                "domain": "blinkie.suppi.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/077e4986-0d7f-4760-a205-abc0bfde43b1"
+            },
+            {
+                "title": "joosh’s RSS Tutorial",
+                "description": "Tutorial on how to set up your RSS feed on Nekoweb!",
+                "createdAt": "2025-11-19T20:57:43.538Z",
+                "creationDate": "2025-11-19 15:57",
+                "tags": "TaughtMeSomething, Tool",
+                "previewImage": "Untitled",
+                "url": "https://joosh.help/rss",
+                "iframeUrl": "",
+                "domain": "joosh.help",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/06e05970-feee-4f0b-b298-f17cefb7ad62"
+            },
+            {
+                "title": "Three.js – JavaScript 3D library",
+                "description": "",
+                "createdAt": "2025-11-19T20:57:06.710Z",
+                "creationDate": "2025-11-19 15:57",
+                "tags": "Tool, Graphics, CreativeOutlet",
+                "previewImage": "Untitled",
+                "url": "https://threejs.org/",
+                "iframeUrl": "",
+                "domain": "threejs.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/b81df633-b21e-48b6-a46d-51c2f8e43f06"
+            },
+            {
+                "title": "* GifyPet *",
+                "description": "Make a virtual pet for you website! WITH GIFS :^]",
+                "createdAt": "2025-11-19T20:56:26.545Z",
+                "creationDate": "2025-11-19 15:56",
+                "tags": "Widgets",
+                "previewImage": "Untitled",
+                "url": "https://gifypet.neocities.org/",
+                "iframeUrl": "",
+                "domain": "gifypet.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/31b75ba2-6b8a-44c5-a64b-6516ed44acf6"
+            },
+            {
+                "title": "CSS Stats - Analyze and visualize CSS",
+                "description": "Visualize your CSS. View colors, typography, spacing, specificity graphs, and design tokens.",
+                "createdAt": "2025-11-19T20:55:15.676Z",
+                "creationDate": "2025-11-19 15:55",
+                "tags": "Tool",
+                "previewImage": "Untitled",
+                "url": "https://cssstats.com/",
+                "iframeUrl": "",
+                "domain": "cssstats.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/5e95bd6c-853c-4bac-b00a-8fd94c35fc30"
+            },
+            {
+                "title": "Solaria’s HTML Color Map",
+                "description": "",
+                "createdAt": "2025-11-19T20:53:44.978Z",
+                "creationDate": "2025-11-19 15:53",
+                "tags": "Tool",
+                "previewImage": "",
+                "url": "https://solaria.neocities.org/colors",
+                "iframeUrl": "",
+                "domain": "solaria.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/b05bb36b-4cfa-46e6-9d3d-ed2ff6428735"
+            },
+            {
+                "title": "File Garden",
+                "description": "Host your files with decency.",
+                "createdAt": "2025-11-19T20:52:32.056Z",
+                "creationDate": "2025-11-19 15:52",
+                "tags": "Tool",
+                "previewImage": "Untitled",
+                "url": "https://filegarden.com/",
+                "iframeUrl": "",
+                "domain": "filegarden.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/3fb49a1c-982c-41c6-9957-3b3ab0356f83"
+            },
+            {
+                "title": "The W3C Markup Validation Service",
+                "description": "W3C’s easy-to-use markup validation service, based on SGML and XML parsers.",
+                "createdAt": "2025-11-19T20:40:18.702Z",
+                "creationDate": "2025-11-19 15:40",
+                "tags": "Tool",
+                "previewImage": "Untitled",
+                "url": "https://validator.w3.org/",
+                "iframeUrl": "",
+                "domain": "validator.w3.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/a3716c1c-4c7b-4a92-9630-1f09a85ecdc1"
+            },
+            {
+                "title": "150,000 Free Fonts - Download Now",
+                "description": "Discover 150,000+ free fonts at FontSpace! Designer-approved downloads with verified licenses. From cursive to tech styles — easy previews and hassle-...",
+                "createdAt": "2025-11-19T20:38:09.871Z",
+                "creationDate": "2025-11-19 15:38",
+                "tags": "Fonts",
+                "previewImage": "Untitled",
+                "url": "https://www.fontspace.com/",
+                "iframeUrl": "",
+                "domain": "www.fontspace.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/4bc41bdd-cce6-4a79-a31b-b8dccf4ecb57"
+            },
+            {
+                "title": "Free Fonts! Legit Free & Quality | Font Squirrel",
+                "description": "Handpicked free fonts for graphic designers with commercial-use licenses.",
+                "createdAt": "2025-11-19T20:35:06.364Z",
+                "creationDate": "2025-11-19 15:35",
+                "tags": "Fonts",
+                "previewImage": "Untitled",
+                "url": "https://www.fontsquirrel.com/",
+                "iframeUrl": "",
+                "domain": "www.fontsquirrel.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/9358dde6-a5a0-4d50-87a7-53bb89038d19"
+            },
+            {
+                "title": "SCRIPTED RESOURCES",
+                "description": "scripted resources",
+                "createdAt": "2025-11-19T20:24:40.899Z",
+                "creationDate": "2025-11-19 15:24",
+                "tags": "MEGALIST, Snippets, Effects, Cursor, Widgets, Graphics, Fonts, Tool, Audio",
+                "previewImage": "",
+                "url": "https://scripted.neocities.org/",
+                "iframeUrl": "",
+                "domain": "scripted.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/2ffd0a3e-ce2a-4a02-ac3a-31dc01fba649"
+            },
+            {
+                "title": "Webmention.io",
+                "description": "Webmention.io is a hosted service created to easily receive webmentions on any web page",
+                "createdAt": "2025-11-19T20:23:09.329Z",
+                "creationDate": "2025-11-19 15:23",
+                "tags": "Tool",
+                "previewImage": "Untitled",
+                "url": "https://webmention.io/",
+                "iframeUrl": "",
+                "domain": "webmention.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/62c1700f-277b-4990-9386-cd7256482505"
+            },
+            {
+                "title": "10 Best CSS Snippets for Web Designers in 2025 - noupe",
+                "description": "Explore the 10 best CSS snippets for web designers in 2025. Boost your projects with these powerful, easy-to-use styling solutions.",
+                "createdAt": "2025-11-19T20:22:16.521Z",
+                "creationDate": "2025-11-19 15:22",
+                "tags": "Snippets",
+                "previewImage": "Untitled",
+                "url": "https://www.noupe.com/magazine/essentials/best-css-snippets-for-web-designers.html",
+                "iframeUrl": "",
+                "domain": "www.noupe.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/038da9a7-c636-4e82-bc29-eda30f2d22e6"
+            },
+            {
+                "title": "Twine / An open-source tool for telling interactive, nonlinear stories",
+                "description": "",
+                "createdAt": "2025-11-19T20:14:52.226Z",
+                "creationDate": "2025-11-19 15:14",
+                "tags": "CreativeOutlet, Free, Storytelling, Tool",
+                "previewImage": "",
+                "url": "https://twinery.org/",
+                "iframeUrl": "",
+                "domain": "twinery.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/8c0b6dba-d557-4c43-87d4-3482af486769"
+            },
+            {
+                "title": "ShortPixel Image Optimizer – Compress & Convert to WebP & AVIF",
+                "description": "The best image optimization plugin for WordPress to boost your site speed! Optimize images and PDFs, bulk compress to WebP/AVIF, resize, and enable la...",
+                "createdAt": "2025-11-19T20:12:51.596Z",
+                "creationDate": "2025-11-19 15:12",
+                "tags": "Tool",
+                "previewImage": "Untitled",
+                "url": "https://shortpixel.com/",
+                "iframeUrl": "",
+                "domain": "shortpixel.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/eb5e2b0c-ea30-4125-952f-571914b55502"
+            },
+            {
+                "title": "codepen free fonts archived",
+                "description": "",
+                "createdAt": "2025-11-19T20:11:52.229Z",
+                "creationDate": "2025-11-19 15:11",
+                "tags": "Fonts",
+                "previewImage": "",
+                "url": "https://codepen.io/sadness97/full/YPXbOEx",
+                "iframeUrl": "",
+                "domain": "codepen.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/74d8979d-b2c7-4735-81be-8b5ec7c2eaab"
+            },
+            {
+                "title": "Index",
+                "description": "Index of Snippets",
+                "createdAt": "2025-11-19T20:08:22.034Z",
+                "creationDate": "2025-11-19 15:08",
+                "tags": "Snippets, Widgets, Tool, Masterlist",
+                "previewImage": "Untitled",
+                "url": "https://snippets.nekoweb.org/snippets/",
+                "iframeUrl": "",
+                "domain": "snippets.nekoweb.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/6991b375-bbe0-43c8-b43d-33dd5ab4b2ca"
+            },
+            {
+                "title": "follow yvesntual",
+                "description": "😭😭😭",
+                "createdAt": "2025-11-19T20:07:17.705Z",
+                "creationDate": "2025-11-19 15:07",
+                "tags": "Graphics, Patterns, Fonts, Masterlist, Snippets",
+                "previewImage": "Untitled",
+                "url": "https://gifs.crd.co/#",
+                "iframeUrl": "",
+                "domain": "gifs.crd.co",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/6cf4438e-40e9-4c3a-876d-c1bc287294cc"
+            },
+            {
+                "title": "Yesterlinks",
+                "description": "Blog and general digital garden of the full stack programmer Simon Dann.",
+                "createdAt": "2025-11-19T20:05:58.716Z",
+                "creationDate": "2025-11-19 15:05",
+                "tags": "MEGALIST",
+                "previewImage": "Untitled",
+                "url": "https://photogabble.co.uk/resources/bookmarks/yesterlinks/",
+                "iframeUrl": "",
+                "domain": "photogabble.co.uk",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/bf5b56bc-4d35-43cb-822b-aa2f80bac4e6"
+            },
+            {
+                "title": "jb deploy to nekoweb",
+                "description": "",
+                "createdAt": "2025-11-19T20:00:49.757Z",
+                "creationDate": "2025-11-19 15:00",
+                "tags": "Tool",
+                "previewImage": "",
+                "url": "https://github.com/jbcarreon123/jbsite4/blob/dev/.github/workflows/deploy.yml",
+                "iframeUrl": "",
+                "domain": "github.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/3aac25b9-2169-49e6-9b96-31a06df4fdf0"
+            },
+            {
+                "title": "Nekobox",
+                "description": "The one stop shop for editing and previewing Nekoweb boxes.",
+                "createdAt": "2025-11-19T19:58:34.599Z",
+                "creationDate": "2025-11-19 14:58",
+                "tags": "Tool, Snippets",
+                "previewImage": "",
+                "url": "https://jbc.lol/utils/nekobox/",
+                "iframeUrl": "",
+                "domain": "jbc.lol",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/88317a48-b206-415b-a81b-9b6d413f08d5"
+            },
+            {
+                "title": "Free Hit Counters for your website or your blog | Free and without ads | Toolbox for webmaster",
+                "description": "Find and put a web hit counter on your site or your blog. Easy, free, totally advertisement-free. Here is how to do.",
+                "createdAt": "2025-11-19T19:55:51.919Z",
+                "creationDate": "2025-11-19 14:55",
+                "tags": "Snippets, Tool",
+                "previewImage": "",
+                "url": "https://www.websiteout.net/counter.php",
+                "iframeUrl": "",
+                "domain": "www.websiteout.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/5b374e2a-aa88-4ce1-a815-4cf75c9cdba1"
+            },
+            {
+                "title": "minnow’s graphics carrd!",
+                "description": "｡:ﾟ૮ ˶ˆ ﻌ ˆ˶ ა ﾟ:｡",
+                "createdAt": "2025-11-19T19:48:26.126Z",
+                "creationDate": "2025-11-19 14:48",
+                "tags": "Graphics, Masterlist, Patterns",
+                "previewImage": "Untitled",
+                "url": "https://biscuit.crd.co/",
+                "iframeUrl": "",
+                "domain": "biscuit.crd.co",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/d8befe91-df9e-4699-9238-1414b813b233"
+            },
+            {
+                "title": "binder",
+                "description": "",
+                "createdAt": "2025-11-19T19:44:06.877Z",
+                "creationDate": "2025-11-19 14:44",
+                "tags": "Tool",
+                "previewImage": "Untitled",
+                "url": "https://thisisourwork.net/binder/#About",
+                "iframeUrl": "",
+                "domain": "thisisourwork.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/e24905b0-dc62-426b-b5fd-836e1f2243a4"
+            },
+            {
+                "title": "innactive",
+                "description": "m",
+                "createdAt": "2025-11-19T19:39:18.632Z",
+                "creationDate": "2025-11-19 14:39",
+                "tags": "Graphics, Effects, Snippets, Widgets, Cursor, Masterlist",
+                "previewImage": "Untitled",
+                "url": "https://yokai.crd.co/",
+                "iframeUrl": "",
+                "domain": "yokai.crd.co",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/d74cacfd-71a5-4a40-b99c-94f266fe67a8"
+            },
+            {
+                "title": "Post by @prizedshirleytemple",
+                "description": "💬 8 🔁 3284 ❤️ 4939 · PIXEL WEBSITES MASTERPOST · sooo i’ve been suggested/browsing a lot of old pixel websites lately SO i thought i’d put this toge...",
+                "createdAt": "2025-11-19T19:38:13.792Z",
+                "creationDate": "2025-11-19 14:38",
+                "tags": "Graphics, Masterlist",
+                "previewImage": "",
+                "url": "https://www.tumblr.com/prizedshirleytemple/89000110153/pixel-websites-masterpost",
+                "iframeUrl": "",
+                "domain": "www.tumblr.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/675e48ba-2e05-451f-9683-96c23f7d362b"
+            },
+            {
+                "title": "pix resources!",
+                "description": "home of all your website making needs!!",
+                "createdAt": "2025-11-19T19:33:35.010Z",
+                "creationDate": "2025-11-19 14:33",
+                "tags": "Graphics, Patterns, Fonts, Masterlist",
+                "previewImage": "Untitled",
+                "url": "https://pix.crd.co/#",
+                "iframeUrl": "",
+                "domain": "pix.crd.co",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/b9c5d0d2-277e-4f5a-9359-9a3653119e71"
+            },
+            {
+                "title": "Picotron by Lexaloffle",
+                "description": "",
+                "createdAt": "2025-11-19T19:30:39.872Z",
+                "creationDate": "2025-11-19 14:30",
+                "tags": "CreativeOutlet",
+                "previewImage": "",
+                "url": "https://www.lexaloffle.com/picotron.php",
+                "iframeUrl": "",
+                "domain": "www.lexaloffle.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/2c0fe32d-cccc-4a69-9494-3b997d3f32ce"
+            },
+            {
+                "title": "GitHub - nycki93/eleventy-for-neocities-users: the easiest way to add Markdown to your HTML website!",
+                "description": "the easiest way to add Markdown to your HTML website! - nycki93/eleventy-for-neocities-users",
+                "createdAt": "2025-11-19T19:29:20.372Z",
+                "creationDate": "2025-11-19 14:29",
+                "tags": "Tool",
+                "previewImage": "",
+                "url": "https://github.com/nycki93/eleventy-for-neocities-users",
+                "iframeUrl": "",
+                "domain": "github.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/92618c01-00eb-47f7-a267-d998fac903eb"
+            },
+            {
+                "title": "neo’s resources",
+                "description": "made by finderqirl",
+                "createdAt": "2025-11-19T19:26:37.681Z",
+                "creationDate": "2025-11-19 14:26",
+                "tags": "Graphics, Fonts, Masterlist, Effects, Widgets, Customize, Tool, Snippets",
+                "previewImage": "Untitled",
+                "url": "https://mist.drr.ac/#links",
+                "iframeUrl": "",
+                "domain": "mist.drr.ac",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/1652d963-db49-4ae9-97d9-c40d2a732b26"
+            },
+            {
+                "title": "Archetype",
+                "description": "An experimental project to exhibit works of art online.",
+                "createdAt": "2025-11-19T19:24:40.542Z",
+                "creationDate": "2025-11-19 14:24",
+                "tags": "Tool",
+                "previewImage": "Untitled",
+                "url": "https://www.archetype.cc/",
+                "iframeUrl": "",
+                "domain": "www.archetype.cc",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/8a3938ed-4bbc-4bb9-a162-1df73f3b9720"
+            },
+            {
+                "title": "TikTok Emojis: Codes, Copy-Paste, Download & Secrets",
+                "description": "Find all emoji codes for TikTok. Copy, paste, and download emoji images. Discover secret symbols, meanings, and easy guides for TikTok comments and ca...",
+                "createdAt": "2025-11-19T19:21:01.365Z",
+                "creationDate": "2025-11-19 14:21",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://www.tk-emojis.com/",
+                "iframeUrl": "",
+                "domain": "www.tk-emojis.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/042c7a1e-d35b-4ecc-a557-21a09e1fc799"
+            },
+            {
+                "title": "Download Font Awesome Free or Pro | Font Awesome",
+                "description": "Grab your copies of Font Awesome for the web or desktop, along with examples, templates, and other goodies.",
+                "createdAt": "2025-11-19T19:17:08.109Z",
+                "creationDate": "2025-11-19 14:17",
+                "tags": "Fonts",
+                "previewImage": "Untitled",
+                "url": "https://fontawesome.com/download",
+                "iframeUrl": "",
+                "domain": "fontawesome.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/5becfa65-01c9-42a8-9fe1-ddcec3458efd"
+            },
+            {
+                "title": "Seamless pattern generator by The l0bster",
+                "description": "Create seamless GIFs from animated patterns",
+                "createdAt": "2025-11-19T19:13:34.449Z",
+                "creationDate": "2025-11-19 14:13",
+                "tags": "Patterns, Customize",
+                "previewImage": "Untitled",
+                "url": "https://the-l0bster.itch.io/seamless-background-generator",
+                "iframeUrl": "",
+                "domain": "the-l0bster.itch.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/b0298b6c-31ab-49e6-8c22-cff58e1028fb"
+            },
+            {
+                "title": "Iconify - home of open source icons",
+                "description": "Open source vector icons from all popular icon sets: 277595 icons from 204 icon sets.",
+                "createdAt": "2025-11-19T19:00:24.242Z",
+                "creationDate": "2025-11-19 14:00",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://icon-sets.iconify.design/",
+                "iframeUrl": "",
+                "domain": "icon-sets.iconify.design",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/08dfabe9-5364-4b83-8d4b-7e99f90159eb"
+            },
+            {
+                "title": "HTML Source Viewer (view-source: on Mobile) • Trevor Fox",
+                "description": "",
+                "createdAt": "2025-11-19T18:55:28.985Z",
+                "creationDate": "2025-11-19 13:55",
+                "tags": "Tool",
+                "previewImage": "Untitled",
+                "url": "https://trevorfox.com/tools/source-viewer/",
+                "iframeUrl": "https://trevorfox.com/tools/source-viewer/embed/#?secret=3pefpFOCun",
+                "domain": "trevorfox.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/5993048b-7986-482d-ad99-c1213f090824"
+            },
+            {
+                "title": "PKMN RBYGSC Font | dafont.com",
+                "description": "PKMN RBYGSC Font | dafont.com",
+                "createdAt": "2025-11-19T18:52:45.568Z",
+                "creationDate": "2025-11-19 13:52",
+                "tags": "Fonts",
+                "previewImage": "Untitled",
+                "url": "https://www.dafont.com/pkmn-rbygsc.font",
+                "iframeUrl": "",
+                "domain": "www.dafont.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/04a30315-0b26-4cf8-9b9e-918c2fc506ec"
+            },
+            {
+                "title": "SITETITLE - Generators",
+                "description": "",
+                "createdAt": "2025-11-19T18:51:47.225Z",
+                "creationDate": "2025-11-19 13:51",
+                "tags": "Patterns, Customize",
+                "previewImage": "Untitled",
+                "url": "https://hekate2.github.io/website-tools/generators/gendirect.html",
+                "iframeUrl": "",
+                "domain": "hekate2.github.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/79062217-e963-4d68-99a4-15dc6bd64422"
+            },
+            {
+                "title": "Background Archive",
+                "description": "",
+                "createdAt": "2025-11-19T18:51:22.279Z",
+                "creationDate": "2025-11-19 13:51",
+                "tags": "Patterns",
+                "previewImage": "Untitled",
+                "url": "https://hekate2.github.io/website-tools/archive/backgrounds.html",
+                "iframeUrl": "",
+                "domain": "hekate2.github.io",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/d7fc71e0-4875-4b07-9d4e-8c04cf470f5c"
+            },
+            {
+                "title": "Neko (software) - Wikipedia",
+                "description": "",
+                "createdAt": "2025-11-19T18:45:11.524Z",
+                "creationDate": "2025-11-19 13:45",
+                "tags": "Graphics, Effects",
+                "previewImage": "Untitled",
+                "url": "https://en.wikipedia.org/wiki/Neko_(software)",
+                "iframeUrl": "https://en.m.wikipedia.org/wiki/Neko_(software)",
+                "domain": "en.wikipedia.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/8fd1369e-8632-4b0f-87ed-7209d3dd81b8"
+            },
+            {
+                "title": "dividers",
+                "description": "Posts on engrampixel tagged as dividers",
+                "createdAt": "2025-11-19T18:43:59.824Z",
+                "creationDate": "2025-11-19 13:43",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://engrampixel.tumblr.com/tagged/dividers",
+                "iframeUrl": "",
+                "domain": "engrampixel.tumblr.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/3d24d4a6-2332-4ce1-bd0b-34f2de98c02e"
+            },
+            {
+                "title": "gingers faves",
+                "description": "Posts on engrampixel tagged as gingers faves",
+                "createdAt": "2025-11-19T18:43:14.960Z",
+                "creationDate": "2025-11-19 13:43",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://engrampixel.tumblr.com/tagged/gingers%20faves",
+                "iframeUrl": "",
+                "domain": "engrampixel.tumblr.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/5ee85095-df4a-4a52-a082-c1fe56f3808c"
+            },
+            {
+                "title": "Backgrounds",
+                "description": "Some backgrounds I made! Please don’t Repost these anywhere!",
+                "createdAt": "2025-11-19T18:41:45.988Z",
+                "creationDate": "2025-11-19 13:41",
+                "tags": "Patterns",
+                "previewImage": "Untitled",
+                "url": "https://rotferkelthemes.tumblr.com/backgrounds",
+                "iframeUrl": "",
+                "domain": "rotferkelthemes.tumblr.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/60ef01ec-491b-4ae9-bd88-9fcb39328006"
+            },
+            {
+                "title": "Cursors",
+                "description": "♪ How to use ♬ Star Jewel by AsterismVW Perfume by Bitmapdreams",
+                "createdAt": "2025-11-19T18:41:20.070Z",
+                "creationDate": "2025-11-19 13:41",
+                "tags": "Cursor",
+                "previewImage": "",
+                "url": "https://rotferkelthemes.tumblr.com/cursors",
+                "iframeUrl": "",
+                "domain": "rotferkelthemes.tumblr.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/0ddc929f-36ce-4785-8208-24cd9f7989af"
+            },
+            {
+                "title": "fruchtgummi",
+                "description": "",
+                "createdAt": "2025-11-19T18:38:12.033Z",
+                "creationDate": "2025-11-19 13:38",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://fruchtgummi.tumblr.com/",
+                "iframeUrl": "",
+                "domain": "fruchtgummi.tumblr.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/615509fb-9dd4-41b9-b65e-bf1ad5ce5867"
+            },
+            {
+                "title": "☆ Pixel Diary ☆",
+                "description": "*I do not make or own any of these pixels • A list of other pixel tumblrs here • How to put Pixels…",
+                "createdAt": "2025-11-19T18:37:50.934Z",
+                "creationDate": "2025-11-19 13:37",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://pixel-diary.tumblr.com/",
+                "iframeUrl": "",
+                "domain": "pixel-diary.tumblr.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/4becfb91-941c-4da2-bc1b-6871617185eb"
+            },
+            {
+                "title": "可愛い無料素材サイト|FOOL LOVERS",
+                "description": "無料で使えるキュート・ポップ・シンプルなフリーWEB素材の配布。季節や動物、食べ物のアイコン、イラスト、壁紙、バナーなどが有ります。",
+                "createdAt": "2025-11-19T18:35:49.110Z",
+                "creationDate": "2025-11-19 13:35",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://foollovers.com/mat/index.html",
+                "iframeUrl": "",
+                "domain": "foollovers.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/ba29a287-16e1-459f-983e-1d37b9d68df2"
+            },
+            {
+                "title": "Website Layout Templates",
+                "description": "無料で使えるWEBサイトテンプレートの配布|レスポンシブ、フレームタイプもあります。色変更・画像変更etcカスタマイズも自由です。",
+                "createdAt": "2025-11-19T18:34:54.794Z",
+                "creationDate": "2025-11-19 13:34",
+                "tags": "Customize, Graphics",
+                "previewImage": "",
+                "url": "https://foollovers.com/te/index.html",
+                "iframeUrl": "",
+                "domain": "foollovers.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/06e825b5-04bd-4101-8ab0-408c19604c5a"
+            },
+            {
+                "title": "Website layout creator",
+                "description": "簡単・無料・高機能なホームページ作成サイト。初心者でも簡単にプロフェッショナルなホームページが作成できます。",
+                "createdAt": "2025-11-19T18:32:23.625Z",
+                "creationDate": "2025-11-19 13:32",
+                "tags": "Customize",
+                "previewImage": "Untitled",
+                "url": "https://xn--yck7ccu3lc1862des4acyvsmy.com/",
+                "iframeUrl": "",
+                "domain": "xn--yck7ccu3lc1862des4acyvsmy.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/7625d760-0bd2-40a5-bd92-0e8c9786a454"
+            },
+            {
+                "title": "可愛いweb素材＆フォントの無料配布",
+                "description": "商用利用OKでかわいいweb素材や、手書き（よもぎフォント等）・ビットマップ・カリグラフィ風などの可愛いフォントを配布しています。",
+                "createdAt": "2025-11-19T18:31:35.992Z",
+                "creationDate": "2025-11-19 13:31",
+                "tags": "Graphics, Fonts",
+                "previewImage": "Untitled",
+                "url": "https://www.asterism-m.com/",
+                "iframeUrl": "",
+                "domain": "www.asterism-m.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/3e7aca15-9821-478b-bb79-1df788b64251"
+            },
+            {
+                "title": "bitmapdreams. sweet and ornate pixel graphics. est.2001",
+                "description": "",
+                "createdAt": "2025-11-19T18:28:07.760Z",
+                "creationDate": "2025-11-19 13:28",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://bitmapdreams.lastsecret.net/",
+                "iframeUrl": "",
+                "domain": "bitmapdreams.lastsecret.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/10d789e1-a403-4cfb-9ecb-77f76cc267fa"
+            },
+            {
+                "title": "html for dummies - Search - Anna’s Archive",
+                "description": "",
+                "createdAt": "2025-11-19T18:25:57.070Z",
+                "creationDate": "2025-11-19 13:25",
+                "tags": "TaughtMeSomething",
+                "previewImage": "",
+                "url": "https://annas-archive.org/search?index=&page=1&sort=&display=&q=html+for+dummies",
+                "iframeUrl": "",
+                "domain": "annas-archive.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/9db992b2-179a-49ef-8efc-bb4d25b6b739"
+            },
+            {
+                "title": "90’s Cursor Effects",
+                "description": "JavaScript mouse effects that follow your cursor or finger!",
+                "createdAt": "2025-11-19T18:23:09.861Z",
+                "creationDate": "2025-11-19 13:23",
+                "tags": "Effects, Cursor",
+                "previewImage": "",
+                "url": "https://tholman.com/cursor-effects/",
+                "iframeUrl": "",
+                "domain": "tholman.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/9ab297b2-a671-43fd-9738-a26d022ef4a3"
+            },
+            {
+                "title": "Wrender Graphics!",
+                "description": "",
+                "createdAt": "2025-11-19T18:20:00.008Z",
+                "creationDate": "2025-11-19 13:20",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://wrender.neocities.org/graphics",
+                "iframeUrl": "",
+                "domain": "wrender.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/786164fd-a844-4bcd-b700-385056aa749e"
+            },
+            {
+                "title": "EYEBARF",
+                "description": "",
+                "createdAt": "2025-11-19T18:19:36.750Z",
+                "creationDate": "2025-11-19 13:19",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://confettiguts.gay/graphics/",
+                "iframeUrl": "",
+                "domain": "confettiguts.gay",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/03b90873-24f6-4591-8993-38a5c88d2db3"
+            },
+            {
+                "title": "super mega huge background pattern texture post!",
+                "description": "ok so here you go!over 350 frickin’ backgrounds, anywhere and everywhere from kawaii to elegant to soft grunge to hipster to glitchy stuff, i mean ma...",
+                "createdAt": "2025-11-19T18:19:03.054Z",
+                "creationDate": "2025-11-19 13:19",
+                "tags": "Patterns",
+                "previewImage": "Untitled",
+                "url": "https://snaappy.tumblr.com/post/48487367697/super-mega-huge-background-pattern-texture-post",
+                "iframeUrl": "",
+                "domain": "snaappy.tumblr.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/91c53527-fd8b-499c-a1c3-d6ce7c62f65e"
+            },
+            {
+                "title": "Free Tiny Identity Buttons | Creative Corner | Flight Rising",
+                "description": "",
+                "createdAt": "2025-11-19T18:18:09.033Z",
+                "creationDate": "2025-11-19 13:18",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://www1.flightrising.com/forums/cc/3078623",
+                "iframeUrl": "",
+                "domain": "www1.flightrising.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/4214aee7-8c7c-48c5-81f3-c874bad57a7f"
+            },
+            {
+                "title": "Moo Like a Goat Graphics",
+                "description": "Art, links, and other fun things.",
+                "createdAt": "2025-11-19T18:17:37.345Z",
+                "creationDate": "2025-11-19 13:17",
+                "tags": "",
+                "previewImage": "Untitled",
+                "url": "https://mooeena.neocities.org/graphics",
+                "iframeUrl": "",
+                "domain": "mooeena.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/1bf993e9-2657-4d0a-96ba-4da5d03d233a"
+            },
+            {
+                "title": "Earthbound Text Labs by Bill Eager",
+                "description": "",
+                "createdAt": "2025-11-19T18:17:00.469Z",
+                "creationDate": "2025-11-19 13:17",
+                "tags": "Widgets, Customize",
+                "previewImage": "Untitled",
+                "url": "https://www.earthboundtext.com",
+                "iframeUrl": "",
+                "domain": "www.earthboundtext.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/402b92c1-03da-4f19-b6d3-f0a7c382cb0e"
+            },
+            {
+                "title": "Goblin-heart.ned sadgirl tiled backgrounds",
+                "description": "",
+                "createdAt": "2025-11-19T18:16:05.024Z",
+                "creationDate": "2025-11-19 13:16",
+                "tags": "Patterns",
+                "previewImage": "",
+                "url": "https://goblin-heart.net/sadgrl/webmastery/downloads/tiledbgs",
+                "iframeUrl": "",
+                "domain": "goblin-heart.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/7aab663b-1cbe-43f3-8c5e-3a45e7bbffb1"
+            },
+            {
+                "title": "tamanotchi.world | Welcome to tamaNOTchi! - Population: 27579",
+                "description": "Create and customize clickable growing pets at tamanotchi.world!",
+                "createdAt": "2025-11-19T18:15:30.841Z",
+                "creationDate": "2025-11-19 13:15",
+                "tags": "Widgets",
+                "previewImage": "Untitled",
+                "url": "https://tamanotchi.world",
+                "iframeUrl": "",
+                "domain": "tamanotchi.world",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/a0681e96-afea-484f-8b41-2d5e2e65fa07"
+            },
+            {
+                "title": "Bonnibel’s Graphic Collection",
+                "description": "",
+                "createdAt": "2025-11-19T18:15:03.457Z",
+                "creationDate": "2025-11-19 13:15",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://graphic.neocities.org/directory",
+                "iframeUrl": "",
+                "domain": "graphic.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/d9fbfa95-8353-4f35-8bfc-a6fa19b96c35"
+            },
+            {
+                "title": "blinkie, stamps, buttons collection for yall!!??? - ⋆ ˚｡⋆୨୧ Manhunter⋆୨୧⋆ ˚｡⋆ ’s Blog | SpaceHey",
+                "description": "decided to show yall some blinkie/stamps/buttons etc. collection from other websites/pages/threads... some of those might not work, but i have diggen ...",
+                "createdAt": "2025-11-19T18:14:25.303Z",
+                "creationDate": "2025-11-19 13:14",
+                "tags": "",
+                "previewImage": "Untitled",
+                "url": "https://blog.spacehey.com/entry?id=1199613",
+                "iframeUrl": "",
+                "domain": "blog.spacehey.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/6365de82-9d2c-4721-aa72-f6a4118b7066"
+            },
+            {
+                "title": "Allyratworld Useless stamps",
+                "description": "",
+                "createdAt": "2025-11-19T18:13:42.327Z",
+                "creationDate": "2025-11-19 13:13",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://allyratworld.com/stamps",
+                "iframeUrl": "",
+                "domain": "allyratworld.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/07adca23-3c22-4352-a886-d00c2394e523"
+            },
+            {
+                "title": "Adrien's Blinkie collection",
+                "description": "",
+                "createdAt": "2025-11-19T18:13:05.443Z",
+                "creationDate": "2025-11-19 13:13",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://adriansblinkiecollection.neocities.org",
+                "iframeUrl": "",
+                "domain": "adriansblinkiecollection.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/b867bb54-2843-4780-a32b-3bbe37e1088a"
+            },
+            {
+                "title": "materials for you - hill house",
+                "description": "",
+                "createdAt": "2025-11-19T18:12:31.176Z",
+                "creationDate": "2025-11-19 13:12",
+                "tags": "Graphics, art, zines",
+                "previewImage": "",
+                "url": "https://hillhouse.neocities.org/materials",
+                "iframeUrl": "",
+                "domain": "hillhouse.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/87103eb9-cf6a-45d2-be40-dd2847abc988"
+            },
+            {
+                "title": "Cool Text Graphics Generator",
+                "description": "Cool Text is a FREE graphics generator for web pages and anywhere else you need an impressive logo without a lot of design work",
+                "createdAt": "2025-11-19T18:11:54.635Z",
+                "creationDate": "2025-11-19 13:11",
+                "tags": "Graphics, Customize",
+                "previewImage": "Untitled",
+                "url": "https://cooltext.com/",
+                "iframeUrl": "",
+                "domain": "cooltext.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/fc805fca-3233-4d11-882e-eb0ed5aca685"
+            },
+            {
+                "title": "Glitter text generator!",
+                "description": "The esiest way to create glitter texts online. It is free!",
+                "createdAt": "2025-11-19T18:10:34.383Z",
+                "creationDate": "2025-11-19 13:10",
+                "tags": "Graphics, Customize",
+                "previewImage": "Untitled",
+                "url": "https://www.gigaglitters.com",
+                "iframeUrl": "",
+                "domain": "www.gigaglitters.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/f4f872f9-f6bc-43ae-a735-6fd15ec810e0"
+            },
+            {
+                "title": "Raining Starss Stamp Collection",
+                "description": "",
+                "createdAt": "2025-11-19T18:09:59.663Z",
+                "creationDate": "2025-11-19 13:09",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://raining-starss.neocities.org/stampcollection",
+                "iframeUrl": "",
+                "domain": "raining-starss.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/62103334-b1b3-429f-b04f-a6c26900622a"
+            },
+            {
+                "title": "blinkie maker | generate blinkie gifs with custom text!",
+                "description": "make your own blinkies! browse blinkie styles and add any text you want. blinkies are tiny gifs they’re great badges for your site, stream, blog, or ...",
+                "createdAt": "2025-11-19T18:09:17.932Z",
+                "creationDate": "2025-11-19 13:09",
+                "tags": "Graphics, Customize",
+                "previewImage": "",
+                "url": "https://blinkies.cafe/",
+                "iframeUrl": "",
+                "domain": "blinkies.cafe",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/da0faa1a-ac7c-4bff-9eec-fcaf203ec858"
+            },
+            {
+                "title": "EYEBARF",
+                "description": "",
+                "createdAt": "2025-11-19T18:08:31.521Z",
+                "creationDate": "2025-11-19 13:08",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://confettiguts.gay/graphics/",
+                "iframeUrl": "",
+                "domain": "confettiguts.gay",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/15a60328-b42e-4bfd-a4ca-1627c5c37b68"
+            },
+            {
+                "title": "The Death Generator",
+                "description": "The Death Generator",
+                "createdAt": "2025-11-19T18:07:32.172Z",
+                "creationDate": "2025-11-19 13:07",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://deathgenerator.com/#gallery",
+                "iframeUrl": "",
+                "domain": "deathgenerator.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/1b893a10-2d38-46c7-8987-2ce94ba077c1"
+            },
+            {
+                "title": "stickers - hill house",
+                "description": "silence lay steadily against the html and css of hill house",
+                "createdAt": "2025-11-19T18:06:48.046Z",
+                "creationDate": "2025-11-19 13:06",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://hillhouse.neocities.org/collections/stickers",
+                "iframeUrl": "",
+                "domain": "hillhouse.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/b50ac483-48d8-40b5-9d3e-c0f624400bad"
+            },
+            {
+                "title": "FΔIRYTRΔSH ♡ est 2O17",
+                "description": "",
+                "createdAt": "2025-11-19T18:06:25.206Z",
+                "creationDate": "2025-11-19 13:06",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://fairytrash.neocities.org/portal/stickers",
+                "iframeUrl": "",
+                "domain": "fairytrash.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/721cf529-f798-4958-adee-11c627988704"
+            },
+            {
+                "title": "sourgummywormz🧷⚡️🎀",
+                "description": "",
+                "createdAt": "2025-11-19T18:03:34.318Z",
+                "creationDate": "2025-11-19 13:03",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://sourgummywormz.neocities.org/collection/",
+                "iframeUrl": "",
+                "domain": "sourgummywormz.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/6eb26998-3b7e-4df2-aaf2-649deb583685"
+            },
+            {
+                "title": "luvpngs",
+                "description": "",
+                "createdAt": "2025-11-19T18:00:37.115Z",
+                "creationDate": "2025-11-19 13:00",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://luvpngs.tumblr.com/",
+                "iframeUrl": "",
+                "domain": "luvpngs.tumblr.com",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/06fea837-e995-43b4-ad3b-5897dddfdd93"
+            },
+            {
+                "title": "Buttonwall.neocities.org",
+                "description": "",
+                "createdAt": "2025-11-19T17:58:52.991Z",
+                "creationDate": "2025-11-19 12:58",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://buttonwall.neocities.org",
+                "iframeUrl": "",
+                "domain": "buttonwall.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/3eda28f9-cdc0-433f-be96-8abd00eef9dc"
+            },
+            {
+                "title": "snaildreamz STICKERS",
+                "description": "",
+                "createdAt": "2025-11-19T17:58:22.674Z",
+                "creationDate": "2025-11-19 12:58",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://snaildreamz.neocities.org/stickers",
+                "iframeUrl": "",
+                "domain": "snaildreamz.neocities.org",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/f31f955d-3d31-403e-acd8-fb799b0e38f4"
+            },
+            {
+                "title": "Plastic Dino blinkies",
+                "description": "",
+                "createdAt": "2025-11-19T17:57:28.313Z",
+                "creationDate": "2025-11-19 12:57",
+                "tags": "Graphics",
+                "previewImage": "Untitled",
+                "url": "https://plasticdino.net/blinkie/blinkies",
+                "iframeUrl": "",
+                "domain": "plasticdino.net",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/66c4cf74-d03d-4a02-bb1d-a39531a0c86f"
+            },
+            {
+                "title": "Pixels.crd.co",
+                "description": "2300+ pixels / favicons !",
+                "createdAt": "2025-11-19T17:53:47.074Z",
+                "creationDate": "2025-11-19 12:53",
+                "tags": "Graphics",
+                "previewImage": "",
+                "url": "https://pixels.crd.co/",
+                "iframeUrl": "",
+                "domain": "pixels.crd.co",
+                "reference": "https://app.capacities.io/229e83b8-7e6c-4a55-8a9b-3681bc095316/0048f30c-48a9-4d73-b813-1ff6685c6479"
+            }
+        ];
+
+        function render(data) {
+            dataUl.innerHTML = "";
+            data.forEach(item => {
+                const { title, tags, description, url, createdAt } = item;
+                const tagsArr = tags.split(",").map(t => t.trim());
+                const tagsEl = tagsArr.map(tag => `<button class="badge" type="button">${tag}</button>`).join("");
+
+                const date = new Date(createdAt);
+                const createdAtLoc = date.toLocaleDateString("en-UK", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric"
+                });
+
+
+                const liEl = document.createElement('li');
+                liEl.classList.add('card');
+                liEl.innerHTML = `
+                <hgroup >
+                <h2 class="card-header">
+                    <a href="${url}" target="_blank">${title}</a>
+                </h2>
+                </hgroup>
+                <hr>
+                <div class="badge-group">
+                    ${tagsEl}    
+                </div>
+                <hr>
+                <section class="card-content">
+                    <span class="icon-mask upload-line"></span>
+                    <span>${createdAtLoc}</span>
+                    <hr>
+                    <p>${description}</p>
+                </section>
+                <!--
+                <a href="${url}" target="_blank" class="btn">
+                    <span class="icon-mask external-link"><br>
+                </span>Visit site</a>
+                -->
+                `;
+
+                dataUl.append(liEl)
+            });
+        }
+
+        const fzIn = document.getElementById("fuzzysortInput");
+        fzIn.addEventListener("input", e => {
+            const query = e.target.value.trim();
+
+            if (query === "") {
+                render(data);
+                return;
+            }
+
+            const results = fuzzysort.go(query, data, {
+                keys: ["title", "tags", "description"],
+                limit: 20,
+                threshold: .5,
+            });
+
+
+            render(results.map(r => r.obj));
+        });
+
+        dataUl.addEventListener("click", e => {
+            const badge = e.target.closest(".badge");
+            if (!badge) return;
+
+            const tag = badge.textContent.trim();
+            fzIn.value = fzIn.value + ` ${tag}`;
+
+            const event = new Event("input");
+            fzIn.dispatchEvent(event);
+        });
+
+        render(data);
+    </script>
+</body>
+
+</html>

@@ -9,7 +9,9 @@
     --text1: #0729c2;
     --text2: #36010e;
     --text3: #f7feff;
+
 }
+
 
 /*:root {
     --border_color: #0729c2;
@@ -31,10 +33,10 @@
         --textbox_color: #558186;
         --nav_color: #5b3146;
         --background_color: #2d2a46;
-        --guestbox_color: #496149;
+        --guestbook_color: #496149;
         --text1: #ffe694;
         --text2: #f22929;
-        --text3: #ffe694;
+        --text3: #c1ff94;
     }
 }
 

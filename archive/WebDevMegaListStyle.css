@@ -1,0 +1,86 @@
+  :root {
+      --border_color: #0729c2;
+      --changelog_color: #e75a5c;
+      --linkbox_color: #f0f479;
+      --textbox_color: #f7feff;
+      --nav_color: #ff89ba;
+      --background_color: #68ccfe;
+      --guestbook_color: #c8f1f7;
+      --text1: #0729c2;
+      --text2: #36010e;
+      --text3: #374d05;
+  }
+
+  @media (prefers-color-scheme:dark) {
+      :root {
+          --border_color: #000000;
+          --changelog_color: #717e54;
+          --linkbox_color: #496149;
+          --textbox_color: #558186;
+          --nav_color: #5b3146;
+          --background_color: #2d2a46;
+          --guestbook_color: #496149;
+          --text1: #ffe694;
+          --text2: #f22929;
+          --text3: #c1ff94;
+      }
+  }
+
+  body {
+      background-color: var(--background_color);
+  }
+
+  .sheet0 {
+      color: var(--text1);
+      border: 5px solid var(--border_color);
+  }
+
+  tr,
+  col {
+      border: 5px solid var(--border_color);
+      background-color: var(--guestbook_color);
+      font-size: larger;
+
+  }
+
+  .row0,
+  .column0 {
+      background-color: var(--textbox_color);
+      color: var(--text1);
+      padding: 16px;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      text-justify: center;
+  }
+
+  a {
+      color: var(--text3);
+  }
+
+  /* scrollbars */
+  /* width */
+  ::-webkit-scrollbar {
+      width: 15px;
+
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+      background: none;
+      border-radius: 17px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: #fde2e200;
+      box-shadow: inset 0 0 8px var(--border_color);
+      border-radius: 17px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #bbe8ff;
+      box-shadow: inset 0 0 5px #2a50f7;
+      border-radius: 17px;
+  }
