@@ -138,7 +138,7 @@ body {
     min-width: 100%;
     max-width: 100%;
     background-color: var(--guestbook_color);
-     color: var(--text1_color);
+    color: var(--text1_color);
     overflow-wrap: anywhere;
 }
 
