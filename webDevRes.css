@@ -2,6 +2,97 @@
   --primary: #DD8FFF;
   --primary-l: #FFFA8F;
   --secondary: #948FFF;
+  /*--------------------------------*/
+  --border_color: #0729c2;
+  --changelog_color: #e75a5c;
+  --linkbox_color: #f0f479;
+  --textbox_color: #92f2ff;
+  --nav_color: #d96363;
+  --background_color: #68ccfe;
+  --guestbook_color: #c8f1f7;
+  --text1: #0729c2;
+  --text2: #36010e;
+  --text3: #f7feff;
+}
+
+@media (prefers-color-scheme:dark) {
+  :root {
+    --border_color: #000000;
+    --changelog_color: #717e54;
+    --linkbox_color: #d9d74c;
+    --textbox_color: #558186;
+    --nav_color: #5b3146;
+    --background_color: #2d2a46;
+    --guestbook_color: #496149;
+    --text1: #ffe694;
+    --text2: #f22929;
+    --text3: #c1ff94;
+  }
+}
+
+.top_nav {
+    position: sticky;
+    top: 0;
+    overflow-wrap: anywhere;
+    overflow: hidden;
+    justify-content: center;
+     padding: 18px;
+    background-color: var(--textbox_color);
+    color: var(--text1);
+    border-bottom: solid 5px;
+    border-right: solid 5px;
+    border-left: solid 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-color: var(--border_color);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.top_nav a:link {
+    color: var(--text1);
+}
+
+.top_nav a:hover {
+    color: var(--nav_color);
+}
+
+.top_nav a:active {
+
+    color: var(--nav_color);
+
+}
+
+/* scrollbars */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background_color);
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fde2e200;
+  box-shadow: inset 0 0 8px var(--border_color);
+  border-radius: 17px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bbe8ff;
+  box-shadow: inset 0 0 5px #2a50f7;
+  border-radius: 17px;
 }
 
 *,
@@ -12,8 +103,8 @@
 
 body {
   font-family: sans-serif;
-  background-color: #1a1a1a;
-  color: whitesmoke;
+  background-color: var(--background_color);
+  color: var(--text3);
 }
 
 a {
@@ -48,7 +139,8 @@ ul {
   width: clamp(200px, calc(350px + 10vw), 420px);
   padding: 0.7rem;
   box-shadow: #00000045 1px 1px 1px 1px;
-  background-color: #222;
+  background-color: var(--nav_color);
+  border-radius: 17px;
 
   hr {
     color: inherit;
@@ -60,7 +152,7 @@ ul {
   font-size: 1rem;
   height: calc(2rem + 5px);
   overflow: hidden;
-  color: var(--primary);
+  color: var(--text3);
 
   &:hover {
     color: var(--primary-l);
@@ -68,12 +160,12 @@ ul {
 }
 
 .card-content {
-  color: #c4c4c4;
+  color: var(--linkbox_color);
   font-size: 0.9rem;
 }
 
 .badge {
-  background-color: var(--secondary);
+  background-color: var(--text3);
   padding: 0.2rem 0.5rem;
   border-radius: 10px;
   transition: scale 100ms, background-color 250ms;
@@ -81,7 +173,7 @@ ul {
 }
 
 .badge:hover {
-  background-color: var(--primary-l);
+  background-color: var(--textbox_color);
   scale: 1.1;
 }
 
