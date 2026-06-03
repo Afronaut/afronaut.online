@@ -144,10 +144,11 @@ body{
 }
 
 .centeredDiv p {
- justify-content: center;
-  align-items: center;
-
-
+  margin: auto;
+display:flex;
+  justify-content:center;
+  align-items:center;
+ background-color: orange;
 }
 .centeredDiv{
   align-items: center;
@@ -155,16 +156,6 @@ body{
   justify-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 200%;
 }
 
-@media screen and (min-width: 320px) {
-  .centeredDiv {
-    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-  }
-}
-@media screen and (min-width: 1000px) {
-  .centeredDiv {
-    font-size: 200%;
-  }
-}
