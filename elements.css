@@ -8,7 +8,7 @@
 /* Must start with ".site-box". Change how your website will appear on main nekoweb site: https://lune.dimden.dev/405a44b7e5.png */
 .site-box {
     text-align: center;
-    background-image: url(/assets/cookiebox.png); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
+    background-image: url(https://mustarddayart.nekoweb.org/images/bunny3.gif); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
     background-repeat: no-repeat;
     color: #b08271;
     font-size: 12px;
@@ -38,10 +38,10 @@
     margin-bottom: 0px;
 }
 .follow{
-    color: brown;
-    background-color: lightcoral;
+    color: rgb(52, 71, 53);
+    background-color: rgb(171, 217, 155);
   }
   .following{
-    color: black;
-    background-color: red;
+    color: rgb(29, 72, 89);
+    background-color: rgb(180, 233, 232);
   }
