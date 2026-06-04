@@ -158,6 +158,19 @@ display:flex;
   align-items:center;
 }
 
+.centeredDiv a {
+  margin: auto;
+display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.centeredDiv h2 {
+  margin: auto;
+display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
 .centeredDiv{
   align-items: center;
   align-content: center;
@@ -165,5 +178,8 @@ display:flex;
   justify-content: center;
   text-align: center;
   font-size: 200%;
+  overflow: scroll;
+  scrollbar-color: #e199bf #af5e47;
+  scrollbar-width: thin;
 }
 
