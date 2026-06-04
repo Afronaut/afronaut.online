@@ -1,4 +1,8 @@
 
+* {
+  box-sizing:border-box;
+}
+
 body{
     background-color: #f7be7d;
     width: 1fr;
