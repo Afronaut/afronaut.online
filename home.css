@@ -1,6 +1,8 @@
 body{
     background-color: #f7be7d;
     width: 1fr;
+    font-size: 3vw;
+    margin:0%;
 }
 
 .wrapper {
@@ -20,15 +22,25 @@ body{
   padding-block-end: 23px;
 
   grid-template-rows: 175px 45px 250px 75px 75px 45px 250px 100px 400px;
-  grid-template-columns: 2fr 100px 1fr 1fr 1fr 100px 2fr;
+  grid-template-columns: 5rem 100px 1fr 1fr 1fr 100px 5rem;
 }
 
+#main p{
+  font-size: small;
+}
 #banner{
   width: 100%;
   height: 100%;
   grid-column: 2 / 7;
   grid-row: 1;
   background-color:#cdc682;
+  
+}
+#banner img{
+  margin: auto;
+display:flex;
+height: auto;
+width:inherit
 }
 
 #home{
@@ -63,7 +75,7 @@ body{
   background-color:#a2d3db;
 }
 
-.main{
+#main{
   width: 100%;
   height: 100%;
   grid-column: 3 / 6;
@@ -71,15 +83,23 @@ body{
   background-color:#dbc772;
 }
 
-.rSection1{
+#rSection1{
   width: 100%;
   height: 100%;
   grid-column: 6 / 7;
   grid-row: 3/4;
   background-color:#a2d3db;
 }
+#rSection1 button{
+  color: #465072;
+  background-color: #88bfd8;
+}
+#rSection1  a{
+  color: #465072;
+}
 
-.rSection2{
+
+#rSection2{
   width: 100%;
   height: 100%;
   grid-column: 6 / 7;
@@ -87,7 +107,7 @@ body{
   background-color:#a2d3db;
 }
 
-.rSection3{
+#rSection3{
   width: 100%;
   height: 100%;
   grid-column: 6 / 7;
@@ -95,7 +115,7 @@ body{
   background-color:#a2d3db;
 }
 
-.friendBanner{
+#friendBanner{
   width: 100%;
   height: 100%;
    grid-column: 2/ 7;
@@ -103,7 +123,7 @@ body{
   background-color:#e199bf;
 }
 
-.buttons{
+#buttons{
   width: 100%;
   height: 100%;
    grid-column: 2 / 5;
@@ -119,12 +139,13 @@ body{
   background-color: #af5e47;
 }
 
-.statuses{
+#statuses{
   width: 100%;
   height: 100%;
    grid-column: 5/ 7;
   grid-row: 7/9;
   background-color: #a1945f;
+ 
 }
 
 #chat{
@@ -144,11 +165,14 @@ body{
 }
 
 .centeredDiv p {
-  margin: auto;
-display:flex;
+ margin: auto;
+display:flex; 
+size: 5px;
   justify-content:center;
   align-items:center;
  background-color: orange;
+
+ 
 }
 
 .centeredDiv iframe {
@@ -156,6 +180,8 @@ display:flex;
 display:flex;
   justify-content:center;
   align-items:center;
+  
+width:inherit;
 }
 
 .centeredDiv a {
@@ -164,21 +190,56 @@ display:flex;
   justify-content:center;
   align-items:center;
 }
+
 .centeredDiv h2 {
   margin: auto;
 display:flex;
   justify-content:center;
   align-items:center;
+  background-color: lightgreen;
+  height: auto;
+width:inherit;
+font-size: 2rem;
+}
+h1{
+  background-color: yellow;
+  font-size: 2.4rem;
 }
 
+.centeredDiv button {
+  margin: auto;
+justify-content:center;
+  align-items:center;
+  max-width: 100%;
+}
+
+.centeredDiv ul {
+  margin: auto;
+display:flex; 
+font-size: 1rem;
+ background-color: rgb(241, 93, 153);
+}
 .centeredDiv{
+
   align-items: center;
   align-content: center;
   justify-items: center;
   justify-content: center;
   text-align: center;
   font-size: 200%;
-  overflow: scroll;
-  scrollbar-color: #e199bf #af5e47;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+
+  scrollbar-color: #baefec #a2d3db48;
   scrollbar-width: thin;
 }
+
+ .scrollable {
+
+  overflow-y: auto;
+  overflow-wrap: break-word;
+overscroll-behavior-x: contain;
+  scrollbar-color: #baefec #a2d3db48;
+  scrollbar-width: thin;
+ }

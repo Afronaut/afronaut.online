@@ -38,10 +38,10 @@
     margin-bottom: 0px;
 }
 .follow{
-    color: rgb(52, 71, 53);
-    background-color: rgb(171, 217, 155);
+    color: #2d2e7e;
+    background-color: #a2d3db;
   }
   .following{
-    color: rgb(29, 72, 89);
-    background-color: rgb(180, 233, 232);
+    color: #ffffff;
+    background-color: #a2d3db;
   }
