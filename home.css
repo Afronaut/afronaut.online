@@ -255,3 +255,23 @@ overscroll-behavior-x: contain;
   scrollbar-color: #baefec #a2d3db48;
   scrollbar-width: thin;
  }
+
+ .marqueeContainer {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marqueepiece {
+  animation: marquee 2s linear infinite;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to { 
+    transform: translateX(-100%);
+  }
+}
