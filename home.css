@@ -21,7 +21,6 @@ height: auto;
 width:100%;
  justify-content:center;
   align-items:center;
-  
 }
 .homelogo{
   background-color:#737b94;
@@ -66,7 +65,7 @@ width:100%;
 .friendmarquee{
   width: 100%;
   background-color:#e199bf;
-  
+  overflow-x: hidden;
 }
 
 .buttons{
