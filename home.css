@@ -1,5 +1,7 @@
 * {
   box-sizing:border-box;
+  scrollbar-color: #a2d3db;
+
 }
 body{ background-color: antiquewhite;
   width: 100%;
@@ -9,24 +11,69 @@ h1{
   font-size: 2.4rem;
 }
 
+
+.layout {
+  width: 100%;
+
+  display: grid;
+  grid:
+    "leftmargin banner banner banner banner banner rightmargin" 200px
+    "leftmargin homelogo music music music followme rightmargin" 45px
+    "leftmargin sitemap main main main rightaside rightmargin" 1fr
+    "leftmargin friendmarquee friendmarquee friendmarquee friendmarquee friendmarquee rightmargin" 45px
+    "leftmargin status status webring guestbook guestbook rightmargin" 240px
+    "leftmargin chat chat chat guestbook guestbook rightmargin" 150px
+    "leftmargin chat chat chat pets pets rightmargin" 500px
+    "leftmargin footer footer footer footer footer rightmargin" 50px
+    / 1fr 90px 1fr 160px 1fr 90px 1fr;
+  gap: .5rem;
+}
+
+.leftmargin { grid-area: leftmargin; }
+.banner { grid-area: banner; }
+.rightmargin { grid-area: rightmargin; }
+.homelogo { grid-area: homelogo; }
+.music { grid-area: music; }
+.followme { grid-area: followme; }
+.sitemap { grid-area: sitemap; }
+.main { grid-area: main; }
+.rightaside { grid-area: rightaside; }
+.friendmarquee { grid-area: friendmarquee; }
+.status { grid-area: status; }
+.webrings { grid-area: webrings; }
+.guestbook { grid-area: guestbook; }
+.chat { grid-area: chat; }
+.pets { grid-area: pets; }
+.footer { grid-area: footer; }
+
+
 .banner{
   background-color:#cdc682;
-  
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .banner img{
-  margin: auto;
-display:flex;
 height: auto;
 width:100%;
- justify-content:center;
-  align-items:center;
+
 }
 .homelogo{
   background-color:#737b94;
 }
 .sitemap{
+   overflow-x: hidden;
   background-color:#a2d3db;
+  /*spacing*/
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  align-items: center;
+word-wrap: break-word;
 }
 .music{ 
 
@@ -34,6 +81,9 @@ width:100%;
 }
 
 .followme{
+   display:flex;
+  justify-content:center;
+  align-items:center;
   width: 100%;
   height: 100%;
   background-color:#a2d3db;
@@ -51,31 +101,51 @@ width:100%;
 .rightaside{
   width: 100%;
   background-color:#a2d3db;
+ 
 /*scroll behavior*/
   overflow: auto;
   overflow-x: hidden;
   overflow-y: scroll;
+  /*spacing*/
+      width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .rightaside button{
+  max-width: 86px;
   color: #465072;
   background-color: #88bfd8;
-  
+  margin-block-end: 12px;
+  word-wrap: break-word;
 }
 
 .friendmarquee{
   width: 100%;
-  background-color:#e199bf;
+  background-color:#737b94;
   overflow-x: hidden;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+}
+.marqueepiece{
+  width: auto;
 }
 
+
 .buttons{
-  width: inherit;
-  height: inherit;
   background-color:#e2dc9d;
 /*scroll behavior*/
   overflow: auto;
   overflow-x: hidden;
   overflow-y: scroll;
+  /*spacing*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .guestbook{
@@ -90,6 +160,15 @@ width:100%;
   overflow: auto;
   overflow-x: hidden;
   overflow-y: scroll;
+  /* spacing */
+    width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  align-items: flex-start;
+
 }
 
 .chat{
@@ -104,30 +183,12 @@ width:100%;
   overflow: auto;
   overflow-x: hidden;
   overflow-y: scroll;
+  /*spacing*/
+
+
 }
 
-.centeredHorizontal{
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 200%;
-  /* overflow-y: auto;
-  overflow-x: hidden;
-  overflow-wrap: break-word;
-
-  scrollbar-color: #baefec #a2d3db48;
-  scrollbar-width: thin;*/
-}
-
-  /* overflow-y: auto;
-  overflow-wrap: break-word;
-overscroll-behavior-x: contain;
-  scrollbar-color: #baefec #a2d3db48;
-  scrollbar-width: thin;
- } */
-
+ 
  .marqueeContainer {
   overflow: hidden;
   white-space: nowrap;
@@ -148,36 +209,9 @@ overscroll-behavior-x: contain;
   }
 }
 
-.layout {
-  width: 100%;
-
-  display: grid;
-  grid:
-    "leftmargin banner banner banner banner banner rightmargin" 200px
-    "leftmargin homelogo music music music followme rightmargin" 45px
-    "leftmargin sitemap main main main rightaside rightmargin" 1fr
-    "leftmargin friendmarquee friendmarquee friendmarquee friendmarquee friendmarquee rightmargin" 45px
-    "leftmargin status status webring guestbook guestbook rightmargin" 240px
-    "leftmargin chat chat chat guestbook guestbook rightmargin" 150px
-    "leftmargin chat chat chat pets pets rightmargin" 500px
-    "leftmargin footer footer footer footer footer rightmargin" 120px
-    / 1fr 90px 1fr 160px 1fr 90px 1fr;
-  gap: 8px;
+ div, nav, section .blueborder{ 
+  border-color: #465072;
+  border-style: groove;
+  border-width: 2px; 
+  border-radius: 12px;
 }
-
-.leftmargin { grid-area: leftmargin; }
-.banner { grid-area: banner; }
-.rightmargin { grid-area: rightmargin; }
-.homelogo { grid-area: homelogo; }
-.music { grid-area: music; }
-.followme { grid-area: followme; }
-.sitemap { grid-area: sitemap; }
-.main { grid-area: main; }
-.rightaside { grid-area: rightaside; }
-.friendmarquee { grid-area: friendmarquee; }
-.status { grid-area: status; }
-.webrings { grid-area: webrings; }
-.guestbook { grid-area: guestbook; }
-.chat { grid-area: chat; }
-.pets { grid-area: pets; }
-.footer { grid-area: footer; }
