@@ -113,11 +113,13 @@ word-wrap: break-word;
   align-items: flex-start;
 }
 .rightaside button{
-  max-width: 86px;
+  max-width: 80px;
   color: #465072;
   background-color: #88bfd8;
-  margin-block-end: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   word-wrap: break-word;
+  
 }
 
 .friendmarquee{
@@ -125,13 +127,16 @@ word-wrap: break-word;
   background-color:#737b94;
   overflow-x: hidden;
   display: flex;
-
   justify-content: center;
   align-items: center;
 
 }
 .marqueepiece{
-  width: auto;
+ 
+  display: flex;
+  flex-direction: column;
+justify-items: stretch;
+  height: 100%;
 }
 
 
@@ -181,13 +186,15 @@ word-wrap: break-word;
   background-color: #a1945f;
 /*scroll behavior*/
   overflow: auto;
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: scroll;
   /*spacing*/
 
-
 }
-
+.pets img, iframe, text{
+   width: 100%;
+  justify-self: center;
+}
  
  .marqueeContainer {
   overflow: hidden;
