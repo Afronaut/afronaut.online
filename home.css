@@ -2,6 +2,7 @@
   box-sizing:border-box;
 }
 body{ background-color: antiquewhite;
+  width: 100%;
 font-size: medium;}
 h1{
   background-color: yellow;
@@ -17,7 +18,7 @@ h1{
   margin: auto;
 display:flex;
 height: auto;
-width:45rem;
+width:100%;
  justify-content:center;
   align-items:center;
   
@@ -41,29 +42,41 @@ width:45rem;
 
 .main{
   width: 100%;
-
   background-color:#dbc772;
+/*scroll behavior*/
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .rightaside{
   width: 100%;
   background-color:#a2d3db;
+/*scroll behavior*/
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .rightaside button{
   color: #465072;
   background-color: #88bfd8;
+  
 }
 
 .friendmarquee{
   width: 100%;
   background-color:#e199bf;
+  
 }
 
-.layout .buttons{
+.buttons{
   width: inherit;
   height: inherit;
-
   background-color:#e2dc9d;
+/*scroll behavior*/
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .guestbook{
@@ -73,14 +86,25 @@ width:45rem;
 
 .status{
   width: 100%;
-
   background-color: #a1945f;
- 
+/*scroll behavior*/
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .chat{
   width: 100%;
   background-color: #cec085;
+}
+
+.pets{
+  width: 100%;
+  background-color: #a1945f;
+/*scroll behavior*/
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .centeredHorizontal{
@@ -98,11 +122,6 @@ width:45rem;
   scrollbar-width: thin;*/
 }
 
-.scrollable {
-  overflow: auto;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
   /* overflow-y: auto;
   overflow-wrap: break-word;
 overscroll-behavior-x: contain;
