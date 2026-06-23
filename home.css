@@ -231,8 +231,8 @@ justify-items: stretch;
 
 #statuscafe {
     padding: .5em;
-    background-color: azure;
-    border: 1px solid midnightblue;
+    background-color: #dbc772;
+    border: 1px solid #401b1b;
 }
 #statuscafe-username {
     margin-bottom: .5em;

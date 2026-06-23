@@ -73,8 +73,6 @@
                     <div id="statuscafe-content"></div>
                 </div>
                 <script src="https://status.cafe/current-status.js?name=afronaut" defer></script>
-                <p>This site has <!--# views --> views and <!--# followers --> followers.</p>
-                <p>It has been updated <!--# updates --> times.</p>
                 <br>
                 <p>I currently feel</p><a href="https://www.imood.com/users/mustarddayart"><img
                         src="https://moods.imood.com/display/uname-mustarddayart/fg-e2dc9/bg-a1945f/imood.gif"
@@ -85,9 +83,46 @@
                         alt="The current mood of the Internet at www.imood.com" border="0"></a>
             </div>
             <div class="chat centeredHorizontal blueborder">13</div>
-            <div class="guestbook centeredHorizontal blueborder"><guestbook-form
+            <div class="guestbook centeredHorizontal" style="overflow-y: scroll;"><guestbook-form
                     guestbook="https://webweav.ing/websites/2lwkw47b/guestbook"></guestbook-form>
                 <guestbook-comments guestbook="https://webweav.ing/websites/2lwkw47b/guestbook"></guestbook-comments>
+                <template id="custom-guestbook-comments">
+                    <style>
+                        .comment-list {
+                            font-size: large;
+                            color: #401b1b;
+                            padding: 10px;
+                            background: #dbc772;
+                            box-sizing: border-box;
+                            min-height: 45px;
+                            border: 1px solid #401b1b;
+                            border-radius: 10px;
+                        }
+                    </style>
+                </template>
+                <template id="custom-guestbook-form">
+                    <style>
+                        input[type="text"],
+                        textarea {
+                            font-size: large;
+                            color: #401b1b;
+                            padding: 10px;
+                            background: #dbc772;
+                            box-sizing: border-box;
+                            min-height: 45px;
+                            border: 1px solid #401b1b;
+                            border-radius: 10px;
+                        }
+
+                        textarea {
+                            height: 150px;
+                        }
+
+                        label {
+                            color: #401b1b;
+                        }
+                    </style>
+                </template>
             </div>
             <div class="pets centeredHorizontal blueborder">
                 <h2>Pets</h2>
