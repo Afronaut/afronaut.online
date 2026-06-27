@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
     <head>
         <title>WIP</title>
         <link rel="stylesheet" href="home.css">
         <script src="home.js"></script>
         <link rel="icon" type="image/x-icon" href="/deerscratch.gif">
-
-        <head>
-            <script type="module" src="https://static.webweav.ing/guestbook-latest.js"></script>
-        </head>
+        <script type="module" src="https://static.webweav.ing/guestbook-latest.js"></script>
     </head>
+    <style>
+        [id] {
+            display: none;
+        }
+
+        [id]:target {
+            display: block;
+        }
+    </style>
 
     <body>
         <section class="layout">
-            <div class="topmargin">0</div>
-            <div class="leftmargin">1</div>
+            <div class="topmargin">top margin</div>
+            <div class="leftmargin">left margin</div>
             <div class="banner centeredHorizontal"> <img
                     src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/300x40%20(Banners)/CalmUnderConstructionBanner.gif">
             </div>
-            <div class="rightmargin">3</div>
-            <div class="homelogo blueborder">4</div>
-            <div class="music blueborder"> </div>
-            <div class="followme blueborder"> <iframe src="https://nekoweb.org/frame/follow" frameborder="0px"
-                    width="98%" height="32px" scrolling="no"></iframe></div>
+            <div class="rightmargin">right margin</div>
+            <div class="homelogo blueborder">logo</div>
+            <div class="music blueborder">music</div>
+            <div class="followme blueborder"> <a href="https://neocities.org/site/siddfinch"><img
+                        src="https://anlucas.neocities.org/prod_625_17265.gif"></a></div>
             <div class="sitemap blueborder">
-                <!--# include file="~/sitemapsidebar.html" -->
+                <h2>sitemap</h2>
+                <a href="https://afronaut.online/sitemap"><button>sitemap</button></a>
             </div>
             <div class="main blueborder">
-                <h1>main</h1>
+                <h1>main CTRL+SHIFT+R to refresh</h1>
                 <p>The carbon in our apple pies billions upon billions tingling of the spine invent the universe
                     permanence of the stars dispassionate extraterrestrial observer. Hundreds of thousands Sea of
                     Tranquility descended from astronomers of brilliant syntheses are creatures of the cosmos take root
@@ -40,7 +47,7 @@
             </div>
             <div class="rightaside centeredHorizontal blueborder">
                 <h2>My Links</h2>
-                <a href="https://mustarddayart.nekoweb.org/WebDevDirectory.html"><button>WebDevDirectory</button></a>
+                <a href="https://afronaut.online/WebDevDirectory.html"><button>WebDevDirectory</button></a>
                 <a href="https://github.com/MustardDay/My-Directories/tree/main"><button>My Directories</button></a>
             </div>
             <div class="friendmarquee centeredVertical marqueeContainer blueborder">
@@ -68,11 +75,13 @@
             </div>
             <div class="status centeredHorizonta blueborder">
                 <h2>Status Updates</h2>
-                <div id="statuscafe">
-                    <div id="statuscafe-username"></div>
-                    <div id="statuscafe-content"></div>
+                <div>
+                    <script type="text/javascript" src="https://counter.websiteout.com/js/5/0/3083/0"></script>
+                    <p>many views so far!</p>
                 </div>
-                <script src="https://status.cafe/current-status.js?name=afronaut" defer></script>
+                <iframe
+                    src="https://petracoding.github.io/neocities/widgets/statuscafe?color=#c8cb43&font-family=Verdana&font-size=13px&line-height=1.5&max-width=200px&username=afronaut&hideUsername=1&hideEmoji=0&hideUsernameAndTime=0&linkColor=#154399&timeColor=#d0e925&swapPositions=0&center=1&marquee=0"
+                    frameborder="0" title="Widget"></iframe>
                 <br>
                 <p>I currently feel</p><a href="https://www.imood.com/users/mustarddayart"><img
                         src="https://moods.imood.com/display/uname-mustarddayart/fg-e2dc9/bg-a1945f/imood.gif"
@@ -81,10 +90,27 @@
                 <p>The general mood of the internet is</p><a href="https://www.imood.com/imood"><img
                         src="https://moods.imood.com/internet/current.gif"
                         alt="The current mood of the Internet at www.imood.com" border="0"></a>
+                <h2>Site Updates</h2>
+                <a href="#1">No.1 - 6/26/26</a><br>
+                <div id="1">
+                    <p>This year I want to make a lot of progress on my site: Todat I edited the grid sizing, made the
+                        middle wider and the margins thinner, added chatbox, added view counter, modified status cafe
+                        widget, redirected some links properly, added this site update section, and added time and date.
+                        This format for the site updates is probably temporary, because I don't like that I can't
+                        minimize it. Also, I am not a fan of how I can't see the chatbox on firefox, which I always use
+                        now. I'll also have to adjust the guestbox. Ugh. </p>
+                </div>
             </div>
-            <div class="chat centeredHorizontal blueborder">13</div>
-            <div class="guestbook centeredHorizontal" style="overflow-y: scroll;"><guestbook-form
-                    guestbook="https://webweav.ing/websites/2lwkw47b/guestbook"></guestbook-form>
+            <div class="chat centeredHorizontal blueborder">
+                <h2>Chat</h2>
+                <iframe src="https://my.cbox.ws/siddFinch" width="100%" height="450" allowtransparency="yes"
+                    allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+            </div>
+            <div class="guestbook centeredHorizontal" style="overflow-y: scroll;">
+                <iframe
+                    src="https://free.timeanddate.com/clock/iah6qjad/n179/fn13/fs16/fc9f9/tct/pct/ftbiu/tt0/tw1/tm2/td2/th2/ts1/tb1"
+                    frameborder="0" width="218" height="20" allowtransparency="true"></iframe>
+                <guestbook-form guestbook="https://webweav.ing/websites/2lwkw47b/guestbook"></guestbook-form>
                 <guestbook-comments guestbook="https://webweav.ing/websites/2lwkw47b/guestbook"></guestbook-comments>
                 <template id="custom-guestbook-comments">
                     <style>
@@ -137,7 +163,9 @@
                     src="https://gifypet.neocities.org/pet/pet.html?name=Golshi&dob=1780534621&gender=b&element=Air&pet=https%3A%2F%2Fmedia.tenor.com%2FlpQVBKekMSwAAAAi%2Fgoloshi-golosh.gif&map=https%3A%2F%2Ffile.garden%2FaR-4_00aUQLjULLS%2FUmaRacetrack.png&background=wood.jpg&tablecolor=%2376c781&textcolor=%2376c781"
                     frameborder="0"></iframe>
             </div>
-            <div class="footer centeredHorizontal"> <!--# include file="~/footer.html" --></div>
+            <footer class="footer centeredHorizontal">
+                <p>© 2026 My Website. All rights reserved.</p>
+            </footer>
         </section>
     </body>
 

@@ -1,10 +1,11 @@
 * {
   box-sizing:border-box;
-
 }
 body{ background-color: antiquewhite;
   width: 100%;
-font-size: medium;}
+font-size: medium;
+
+}
 h1{
   background-color: yellow;
   font-size: 2.4rem;
@@ -17,15 +18,15 @@ h1{
   display: grid;
   grid:
     "topmargin topmargin topmargin topmargin topmargin topmargin topmargin" 10px
-    "leftmargin banner banner banner banner banner rightmargin" 100px
-    "leftmargin homelogo music music music followme rightmargin" 45px
+    "leftmargin banner banner banner banner banner rightmargin" 160px
+    "leftmargin homelogo music music music followme rightmargin" 33px
     "leftmargin sitemap main main main rightaside rightmargin" 1fr
     "leftmargin friendmarquee friendmarquee friendmarquee friendmarquee friendmarquee rightmargin" 45px
     "leftmargin status status webring guestbook guestbook rightmargin" 240px
     "leftmargin chat chat chat guestbook guestbook rightmargin" 150px
-    "leftmargin chat chat chat pets pets rightmargin" 500px
+    "leftmargin chat chat chat pets pets rightmargin" 400px
     "leftmargin footer footer footer footer footer rightmargin" 50px
-    / 1fr 90px 20px 160px 200px 90px 1fr;
+    / 1fr 90px 120px 235px 235px 90px 1fr;
   gap: .5rem;
 }
 
@@ -221,7 +222,7 @@ justify-items: stretch;
   }
 }
 
- div, nav, section .blueborder{ 
+ div, nav , section .blueborder{ 
   border-color: #465072;
   border-style: groove;
   border-width: 2px; 
@@ -230,14 +231,14 @@ justify-items: stretch;
 
 
 #statuscafe {
-    padding: .5em;
+    padding: 1px;
     background-color: #dbc772;
     border: 1px solid #401b1b;
 }
 #statuscafe-username {
-    margin-bottom: .5em;
+    margin: .5em 0.2em .5em 0.2em;
 }
 #statuscafe-content {
-    margin: 0 1em 0.5em 1em;
+    margin: 0 0.2em 0.5em 0.2em;
 }
 
