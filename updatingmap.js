@@ -1,0 +1,13 @@
+document.getElementById('updatingmap').innerHTML = `<h2>sitemap</h2>
+                    <a href="https://afronaut.online/aboutme"><img
+                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/afronautbuttonconsole.png"></a>
+                    <a href="https://afronaut.online/blog"><img
+                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/blogbuttonconsole.png"></a>
+                    <a href="https://afronaut.online/buttonwall"><img
+                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/buttonsbuttonconsole.png"></a>
+                    <a href="https://afronaut.online/WebDevDirectory"><img
+                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/WDDbuttonconsole.png"></a>
+                    <a href="https://afronaut.online/credits"><img
+                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/creditsbuttonconsole.png"></a>
+                    <a href="https://afronaut.online/sitemap"><img
+                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/sitemapbuttonconsole.png"></a>`;
