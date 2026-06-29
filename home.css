@@ -42,7 +42,7 @@ h1{
     "leftmargin banner banner banner banner banner rightmargin" 160px
     "leftmargin homelogo music music music followme rightmargin" 33px
     "leftmargin sitemap main main main rightaside rightmargin" 350px
-    "leftmargin friendmarquee friendmarquee friendmarquee friendmarquee friendmarquee rightmargin" 45px
+    "leftmargin sitemarquee sitemarquee sitemarquee sitemarquee sitemarquee rightmargin" 45px
     "leftmargin status status webrings guestbook guestbook rightmargin" 240px
     "leftmargin chat chat chat guestbook guestbook rightmargin" 150px
     "leftmargin chat chat chat pets pets rightmargin" 400px
@@ -61,7 +61,7 @@ h1{
 .sitemap { grid-area: sitemap; }
 .main { grid-area: main; }
 .rightaside { grid-area: rightaside; }
-.friendmarquee { grid-area: friendmarquee; }
+.sitemarquee { grid-area: sitemarquee; }
 .status { grid-area: status; }
 .webrings { grid-area: webrings; }
 .guestbook { grid-area: guestbook; }
@@ -81,6 +81,7 @@ h1{
 height: auto;
 width:100%;
 margin: auto;
+
 }
 .homelogo{
  display: flex;
@@ -126,9 +127,6 @@ display: flex;
   align-content: stretch;
 }
 
-
-
-
 .main{
   min-height: 100%;
   width: 100%;
@@ -162,25 +160,39 @@ button{
   max-width: 90%;
 }
 
-.friendmarquee{
+.sitemarquee{
   width: 100%;
   background-color:var(--primary);
-  overflow-x: hidden;
+  overflow-x: auto;
   display: flex;
+  margin: 2px auto;
+  
 }
 
+.group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  animation: spin 5s infinite linear;
+  padding-right: 3px;
+}
 .marqueepiece{
   display: flex;
-  flex-direction: column;
-display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex: 0 0 5em;
+  border-color: #e8edff;
+  height: 40px;
+  padding: 7px;
+  text-align: center;
+align-content:center;
+justify-content: center;
   align-items: center;
-  align-content: stretch;
-  height: 100%;
 }
 
+@keyframes spin{
+  from {translate: 0;}
+  to {translate: -100%;}
+}
 
 .webrings{
   background-color:var(--primary);
@@ -241,27 +253,6 @@ display: flex;
   justify-self: center;
 }
  
- .marqueeContainer {
-  overflow: hidden;
-  white-space: nowrap;
-  
-}
-
- .marqueepiece {
-  animation: marquee 2s linear infinite;
-  display: inline-block;
-  padding-right: 10px;
-  
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to { 
-    transform: translateX(-100%);
-  }
-}
 
   .blueborder{ 
   border-color: #e8edff;

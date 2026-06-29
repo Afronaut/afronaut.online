@@ -1,0 +1,48 @@
+* {
+  box-sizing:border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  ::-webkit-scrollbar { display: none; }
+}
+
+:root{
+--text: #fef5f1;
+--background: #89c68c;
+--primary: #b1bbd397;
+--secondary: #49356990;
+--accent: #19553193;
+}
+
+
+body{ 
+  width: 100%;
+font-size: medium;
+background-color:#2d3a80;
+background-image:url('https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/Patterns/starry.jpeg');
+
+font-family: 'Titillium Web', sans-serif;
+font-size: 13px;
+color:#fff;
+
+letter-spacing:1px;
+
+}
+
+
+.layout {
+  width: 100%;
+
+  display: grid;
+  grid:
+    "leftmargin header rightmargin" auto
+    "leftmargin body rightmargin" 1fr
+    "leftmargin footer rightmargin" auto
+    / 1fr 790px 1fr;
+  gap: 8px;
+}
+
+.leftmargin { grid-area: leftmargin; }
+.header { grid-area: header; }
+.rightmargin { grid-area: rightmargin; }
+.body { grid-area: body; }
+.footer { grid-area: footer; }

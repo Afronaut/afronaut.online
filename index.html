@@ -9,6 +9,8 @@
         <script src="home.js"></script>
         <link rel="icon" type="image/x-icon" href="/deerscratch.gif">
         <script type="module" src="https://static.webweav.ing/guestbook-latest.js"></script>
+        <script src="https://www.w3schools.com/lib/w3data.js"></script>
+        <script src="https://iframe.chat/scripts/main.min.js"></script>
     </head>
     <style>
         [id] {
@@ -37,27 +39,12 @@
             </div>
             <div class="sitemap centered-horizontal blueborder">
                 <nav class="centered-horizontal">
-                    <div id="updatingmap">
-                        <script src="updatingmap.js"></script>
-                        <noscript>
-                            <p>This sidebar uses JS to display the navigation on all pages, so it is easy to update when
-                                I make more pages. Use the <a href="https://afronaut.online/sitemap">sitemap</a> to
-                                navigate if you have JS disabled.</p>
-                        </noscript>
-                    </div>
-                    <h2>sitemap</h2>
-                    <a href="https://afronaut.online/aboutme"><img
-                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/afronautbuttonconsole.png"></a>
-                    <a href="https://afronaut.online/blog"><img
-                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/blogbuttonconsole.png"></a>
-                    <a href="https://afronaut.online/buttonwall"><img
-                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/buttonsbuttonconsole.png"></a>
-                    <a href="https://afronaut.online/WebDevDirectory"><img
-                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/WDDbuttonconsole.png"></a>
-                    <a href="https://afronaut.online/credits"><img
-                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/creditsbuttonconsole.png"></a>
-                    <a href="https://afronaut.online/sitemap"><img
-                            src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/sitemapbuttonconsole.png"></a>
+                    <div w3-include-html="/sitemap.html"></div>
+                    <noscript>
+                        <p> You have js disabled, which I use for this sidebar. Please click </p> <a
+                            href="sitemap.html">here</a>
+                        <p>for the sitemap.</p>
+                    </noscript>
                 </nav>
             </div>
             </div>
@@ -94,29 +81,32 @@
                     billions upon billions upon billions upon billions.</p>
             </div>
             <div class="rightaside centered-horizontal blueborder">
-                <h2>My Links</h2>
-                <a href="https://github.com/MustardDay/My-Directories/tree/main"><img
-                        src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/MyDirectoriesbuttonconsole.png"></a>
+                <div w3-include-html="/friendbuttons.html"></div>
+                <noscript>
+                    <p> You have js disabled, which I use for this sidebar. Please click </p> <a
+                        href="friendbuttons.html">here</a>
+                    <p>to see my friends.</p>
+                </noscript>
             </div>
-            <div class="friendmarquee centeredVertical marqueeContainer blueborder">
-                <div class="marqueepiece ">
-                    <p style="font-size: x-small;">Friend buttons (1)</p>
+            <div class="sitemarquee blueborder">
+                <div class="group">
+                    <p style="font-size: x-small;">Cool Sites</p>
+                    <div class="marqueepiece" aria-hidden="true"> <a href="https://kamirose.neocities.org/"><img
+                                src="https://kamirose.neocities.org/images/buttons/kamirose-button.png"></a>
+                    </div>
+                    <div class="marqueepiece" aria-hidden="true"> <img
+                            src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/bluelogo.gif">
+                    </div>
                 </div>
-                <div class="marqueepiece" aria-hidden="true"> <img
-                        src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/bluelogo.gif"> </div>
-                <div class="marqueepiece" aria-hidden="true"> <img
-                        src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/bluelogo.gif"> </div>
-                <div class="marqueepiece" aria-hidden="true"> <img
-                        src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/bluelogo.gif"> </div>
-                <div class="marqueepiece">
-                    <p style="font-size: x-small;">Friend buttons (2)</p>
+                <div class="group">
+                    <p style="font-size: x-small;">Cool Sites</p>
+                    <div class="marqueepiece" aria-hidden="true"> <a href="https://kamirose.neocities.org/"><img
+                                src="https://kamirose.neocities.org/images/buttons/kamirose-button.png"></a>
+                    </div>
+                    <div class="marqueepiece" aria-hidden="true"> <img
+                            src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/bluelogo.gif">
+                    </div>
                 </div>
-                <div class="marqueepiece" aria-hidden="true"> <img
-                        src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/bluelogo.gif"> </div>
-                <div class="marqueepiece" aria-hidden="true"> <img
-                        src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/bluelogo.gif"> </div>
-                <div class="marqueepiece" aria-hidden="true"> <img
-                        src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/bluelogo.gif"> </div>
             </div>
             <div class="webrings centered-horizontal blueborder">
                 <h2>webrings and buttons</h2>
@@ -141,12 +131,15 @@
                 <section>
                     <h2>Site Updates</h2>
                     <h4>No.2 - 6/28/26</h4>
-                    <p>Pt.1: Today I changed the grid sizing again, added temporary buttons to the sidebars and top, centered
-                        all of those,changed the color scheme, removed the scrollbars so I don't have to deal with them
-                        anymore. I'm still having huge problems with the marquee and GIFy pet. Right now I'm trying to
-                        add an updating sitemap using javascript but it doesn't even show up. JS is not disabled, so
-                        it's a problem with the code.
-                    Pt.1: Added something to prevent people saving my shit to pinterest. Added a whole bunch of files to keep out ai scrapers.</p>
+                    <p>Pt.1: Today I changed the grid sizing again, added temporary buttons to the sidebars and top,
+                        centered all of those,changed the color scheme, removed the scrollbars so I don't have to deal
+                        with them anymore. I'm still having huge problems with the marquee and GIFy pet. Right now I'm
+                        trying to add an updating sitemap using javascript but it doesn't even show up. JS is not
+                        disabled, so it's a problem with the code. Pt.1: Added something to prevent people saving my
+                        shit to pinterest. Added a whole bunch of files to keep out ai scrapers.</p>
+                    <p>Pt2: I made the marquee work but it's not vertically centered. The js sidebars are now updating
+                        correctly. I also changed from cbox to chattable, but I can't see it since I'm on firefox. The last thing I did was start a layout for other pages. Now
+                        I'm really just worried about the graphic design.</p>
                     <h4>No.1 - 6/26/26</h4>
                     <p>This year I want to make a lot of progress on my site: Today I edited the grid sizing, made the
                         middle wider and the margins thinner, added chatbox, added view counter, modified status cafe
@@ -158,25 +151,29 @@
             </div>
             <div class="chat centeredHorizontal blueborder">
                 <h2>Chat</h2>
-                <iframe src="https://my.cbox.ws/siddFinch" width="100%" height="450" allowtransparency="yes"
-                    allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                <iframe src="https://iframe.chat/embed?chat=15219290" id="chattable"></iframe>
+                <script>
+                    chattable.initialize({
+                        theme: "moderno"
+                    });
+                </script>
             </div>
             <div class="guestbook centeredHorizontal blueborder" style="overflow-y: scroll;">
                 <iframe
-                    src="https://free.timeanddate.com/clock/iah6qjad/n179/fn13/fs16/fc9f9/tct/pct/ftbiu/tt0/tw1/tm2/td2/th2/ts1/tb1"
-                    frameborder="0" width="218" height="20" allowtransparency="true"></iframe>
+                    src="https://free.timeanddate.com/clock/iaha9vec/n179/fn4/fceee/tct/pct/ftbu/tt0/tw1/tm2/td1/th2/ts1/tb1"
+                    frameborder="0" width="174" height="19" allowtransparency="true"></iframe>
                 <guestbook-form guestbook="https://webweav.ing/websites/2lwkw47b/guestbook"></guestbook-form>
                 <guestbook-comments guestbook="https://webweav.ing/websites/2lwkw47b/guestbook"></guestbook-comments>
                 <template id="custom-guestbook-comments">
                     <style>
                         .comment-list {
                             font-size: large;
-                            color: #401b1b;
+                            color: #fef5f1;
                             padding: 10px;
-                            background: #dbc772;
+                            background: #1c122c90;
                             box-sizing: border-box;
                             min-height: 45px;
-                            border: 1px solid #401b1b;
+                            border: 1px solid #49356990;
                             border-radius: 10px;
                         }
                     </style>
@@ -186,12 +183,12 @@
                         input[type="text"],
                         textarea {
                             font-size: large;
-                            color: #401b1b;
+                            color: #fef5f1;
                             padding: 10px;
-                            background: #dbc772;
+                            background: #1c122c90;
                             box-sizing: border-box;
                             min-height: 45px;
-                            border: 1px solid #401b1b;
+                            border: 1px solid #49356990;
                             border-radius: 10px;
                         }
 
@@ -200,7 +197,7 @@
                         }
 
                         label {
-                            color: #401b1b;
+                            color: #fef5f1;
                         }
                     </style>
                 </template>
@@ -218,10 +215,16 @@
                     src="https://gifypet.neocities.org/pet/pet.html?name=Golshi&dob=1780534621&gender=b&element=Air&pet=https%3A%2F%2Fmedia.tenor.com%2FlpQVBKekMSwAAAAi%2Fgoloshi-golosh.gif&map=https%3A%2F%2Ffile.garden%2FaR-4_00aUQLjULLS%2FUmaRacetrack.png&background=wood.jpg&tablecolor=%2376c781&textcolor=%2376c781"
                     frameborder="0"></iframe>
             </div>
-            <footer class="footer centeredHorizontal blueborder">
-                <p>© 2026 My Website. All rights reserved.</p>
-            </footer>
+            <div class="footer centeredHorizontal blueborder">
+                <div w3-include-html="/footer.html"></div>
+                <noscript>
+                    <p> You have js disabled, which I use for this footer. Please click </p> <a
+                        href="footer.html">here</a>
+                    <p>for the footer.</p>
+                </noscript>
+            </div>
         </section>
+        <script>w3IncludeHTML();</script>
     </body>
 
 </html>
