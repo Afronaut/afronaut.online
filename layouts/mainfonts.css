@@ -1,0 +1,117 @@
+@font-face {
+  font-family: chemre;
+  src: url(https://file.garden/aR-4_00aUQLjULLS/Fonts/Chemre.ttf);
+}
+
+@font-face {
+  font-family: wonder;
+  src: url(https://file.garden/aR-4_00aUQLjULLS/Fonts/wonderland.ttf);
+}
+
+@font-face {
+  src: url(https://file.garden/aR-4_00aUQLjULLS/Fonts/Shutter%20Speed.ttf);
+  font-family: shutter;
+}
+
+@font-face {
+  src: url(https://file.garden/aR-4_00aUQLjULLS/Fonts/PsycheLover-Regular.otf);
+  font-family: psyche;
+}
+
+@font-face {
+  src: url(https://file.garden/aR-4_00aUQLjULLS/Fonts/Chelon.ttf);
+  font-family: chelon;
+}
+
+@font-face {
+  font-family: windows;
+  src: url(https://file.garden/aR-4_00aUQLjULLS/Fonts/W95FA.otf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+p {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+h1 {
+  font-family: psyche;
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-family: chemre;
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-family: chemre;
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-family: shutter;
+  font-size: 1.1rem;
+
+}
+
+h5 {
+  font-family: windows;
+  font-size: 1rem;
+}
+
+h6 {
+  font-family: windows;
+
+  font-size: .8rem;
+}
+
+p {
+  font-family: chelon;
+  font-size: 1rem;
+}
+
+a {
+  color: aqua;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+
+
+a:hover {
+  color: aquamarine;
+  font-weight: 800;
+}
+
+a:visited {
+  color: #526cff;
+}
+
+ol {
+  padding: 20px;
+  font-size: 1rem;
+  font-family: chelon;
+}
+
+ol li {
+  padding: 10px;
+  margin-left: 20px;
+}
+
+ul {
+  padding: 20px;
+  font-size: 1rem;
+  font-family: chelon;
+}
+
+ul li {
+  margin: 5px;
+}

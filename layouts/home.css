@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+:root {
+  --text: #fef5f1;
+  --background: #89c68c;
+  --primary: #b1bbd397;
+  --secondary: #49356990;
+  --accent: #19553193;
+}
+
+
+body {
+  width: 100%;
+  font-size: medium;
+  background-color: #2d3a80;
+  background-image: url('https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/Patterns/starry.jpeg');
+
+
+  color: #fff;
+
+  letter-spacing: 1px;
+
+}
+
+h1 {
+  background-color: rgb(92, 96, 55);
+  font-size: 2.4rem;
+}
+
+
+.layout {
+  width: 100%;
+
+  display: grid;
+  grid:
+    "topmargin topmargin topmargin topmargin topmargin topmargin topmargin" 10px "leftmargin banner banner banner banner banner rightmargin" 160px "leftmargin homelogo music music music followme rightmargin" 40px "leftmargin sitemap main main main rightaside rightmargin" 350px "leftmargin sitemarquee sitemarquee sitemarquee sitemarquee sitemarquee rightmargin" 45px "leftmargin status status webrings guestbook guestbook rightmargin" 240px "leftmargin greenhouse greenhouse greenhouse guestbook guestbook rightmargin" 150px "leftmargin greenhouse greenhouse greenhouse clubs clubs rightmargin" 400px "leftmargin footer footer footer footer footer rightmargin" 50px / 1fr 100px 120px 235px 235px 100px 1fr;
+  gap: 8px;
+}
+
+.topmargin {
+  grid-area: topmargin;
+}
+
+.leftmargin {
+  grid-area: leftmargin;
+}
+
+.banner {
+  grid-area: banner;
+}
+
+.rightmargin {
+  grid-area: rightmargin;
+}
+
+.homelogo {
+  grid-area: homelogo;
+}
+
+.music {
+  grid-area: music;
+}
+
+.followme {
+  grid-area: followme;
+}
+
+.sitemap {
+  grid-area: sitemap;
+}
+
+.main {
+  grid-area: main;
+}
+
+.rightaside {
+  grid-area: rightaside;
+}
+
+.sitemarquee {
+  grid-area: sitemarquee;
+}
+
+.status {
+  grid-area: status;
+}
+
+.webrings {
+  grid-area: webrings;
+}
+
+.guestbook {
+  grid-area: guestbook;
+}
+
+.greenhouse {
+  grid-area: greenhouse;
+}
+
+.clubs {
+  grid-area: clubs;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+
+.banner {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img {
+  height: auto;
+  width: 100%;
+  margin: auto;
+
+}
+
+.homelogo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.sitemap {
+  overflow-x: hidden;
+  background-color: var(--secondary);
+  /*spacing*/
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: top;
+  align-items: center;
+  align-content: stretch;
+  gap: 8px;
+  word-wrap: break-word;
+  word-break: keep-all;
+
+  color: #e8edff;
+}
+
+.music {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.followme {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.main {
+  min-height: 100%;
+  width: 100%;
+  background-color: var(--accent);
+  word-break: keep-all;
+  /*scroll behavior*/
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.rightaside {
+  overflow-x: hidden;
+  background-color: var(--secondary);
+  /*spacing*/
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  align-items: center;
+  word-wrap: break-word;
+  word-break: keep-all;
+
+  color: #e8edff;
+}
+
+button {
+  word-break: break-all;
+  max-width: 90%;
+}
+
+.sitemarquee {
+  width: 100%;
+  background-color: var(--primary);
+  overflow-x: auto;
+  display: flex;
+  margin: 2px auto;
+
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  animation: spin 25s infinite linear;
+  padding-right: 3px;
+}
+
+.marqueepiece {
+  display: flex;
+  flex: 0 0 5em;
+  border-color: #e8edff;
+  height: 40px;
+  padding: 7px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: -100%;
+  }
+}
+
+.webrings {
+  background-color: var(--primary);
+  /*scroll behavior*/
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /*spacing*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.guestbook {
+  width: 100%;
+  background-color: var(--secondary);
+  overflow: hidden;
+}
+
+.status {
+  width: 100%;
+  background-color: var(--accent);
+  word-break: keep-all;
+  /*scroll behavior*/
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* spacing */
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  align-items: flex-start;
+
+}
+
+.greenhouse {
+  color: #e8edff;
+  width: 100%;
+  background-color: var(--secondary);
+}
+
+.clubs {
+  width: 100%;
+  background-color: var(--accent);
+  /*scroll behavior*/
+  overflow: auto;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  /*spacing*/
+
+}
+
+.clubs img,
+iframe,
+text {
+  width: 100%;
+  justify-self: center;
+}
+
+
+.blueborder {
+  border-color: #e8edff;
+  border-style: groove;
+  border-width: 2px;
+  border-radius: 12px;
+}
+
+
+#statuscafe {
+  padding: 1px;
+  background-color: #dbc772;
+  border: 1px solid #401b1b;
+}
+
+#statuscafe-username {
+  margin: .5em 0.2em .5em 0.2em;
+}
+
+#statuscafe-content {
+  margin: 0 0.2em 0.5em 0.2em;
+}
+
+.centered-horizontal {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.centered-vertical {
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-items: center;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  width: 606px;
+  height: 50px;
+}
+
+.fully-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: auto;
+  padding-bottom: auto;
+
+}

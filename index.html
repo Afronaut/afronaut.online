@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta name="pinterest" content="nopin" description="I don't want that pinterest ai bullshit thanks" />
-    <meta name="robots" content="noai, noimageai">
 
     <head>
+        <meta name="pinterest" content="nopin" description="I don't want that pinterest ai bullshit thanks" />
+        <meta name="robots" content="noai, noimageai">
         <title>WIP</title>
-        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="layouts/home.css">
         <script src="home.js"></script>
         <link rel="icon" type="image/x-icon" href="/deerscratch.gif">
         <script type="module" src="https://static.webweav.ing/guestbook-latest.js"></script>
         <script src="https://www.w3schools.com/lib/w3data.js"></script>
         <script src="https://iframe.chat/scripts/main.min.js"></script>
-    </head>
-    <style>
-        [id] {
-            display: none;
-        }
+        <link rel="stylesheet" href="layouts/mainfonts.css">
+        <link rel="stylesheet" href="layouts/musicmarquee.css">
+        <style>
+            [id] {
+                display: none;
+            }
 
-        [id]:target {
-            display: block;
-        }
-    </style>
+            [id]:target {
+                display: block;
+            }
+        </style>
+    </head>
 
     <body>
         <section class="layout">
@@ -30,152 +32,65 @@
                     src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/300x40%20(Banners)/CalmUnderConstructionBanner.gif">
             </div>
             <div class="rightmargin blueborder">right margin</div>
-            <div class="homelogo blueborder"><a href="https://afronaut.online/"><img
+            <div class="homelogo blueborder fully-centered"><a href="https://afronaut.online/"><img
                         src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/afronautbuttonpurple.gif"></a>
             </div>
             <div class="music blueborder">
-                <link rel="preconnect" href="https://fonts.googleapis.com">
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;800&display=swap"
-                    rel="stylesheet">
-                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
                 <!-------MUSIC PLAYER BY GLENTHEMES------->
                 <script src="//static.tumblr.com/gtjt4bo/QRmphdsdv/glenplayer02.js"></script>
-                <style type="text/css">
-                    /*-------MUSIC PLAYER BY GLENTHEMES-------*/
-                    #glenplayer02 {
-                        position: relative;
-                        top: 0px;
-                        left: 5px;
-                        display: flex;
-                        z-index: 99;
-                    }
-
-                    #glenplayer02 a {
-                        text-decoration: none;
-                    }
-
-                    #glenplayer02>div {
-                        align-self: center;
-                        -webkit-align-self: center;
-                    }
-
-                    .music-controls {
-                        user-select: none;
-                        -webkit-user-select: none;
-                        width: 13px;
-                        font-size: 18px;
-                        cursor: pointer;
-                    }
-
-                    .playy,
-                    .pausee {
-                        color: #000000;
-                        text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff, 0 0;
-                    }
-
-                    /* color of play & pause buttons */
-                    .pausee {
-                        display: none;
-                    }
-
-                    .sonata {
-                        margin-left: 10px;
-                        font-family: 'M PLUS Rounded 1c', sans-serif;
-                        font-size: 14px;
-                        color: #000000;
-                        font-weight: bold;
-                        text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff, 0 0;
-                        /* color of music note symbol */
-                    }
-
-                    .labeltext {
-                        margin-left: 0px;
-                        position: relative;
-                        bottom: 10px;
-                        font-family: 'M PLUS Rounded 1c', sans-serif;
-                        font-size: 14px;
-                        color: #000000;
-                        font-weight: bold;
-                        text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff, 0 0;
-                        /* color of song title */
-                    }
-                </style>
-
-                <body>
-                    <!-------MUSIC PLAYER BY GLENTHEMES------->
-                    <div id="glenplayer02">
-                        <div class="music-controls" onclick="songstart();">
-                            <div class="playy">►</div>
-                            <div class="pausee">♬</div>
-                        </div>
-                        <div class="sonata">
-                            <marquee> Music by themusicangel on Discord! Go commission them! </marquee>
-                        </div>
-                        <div class="labeltext"></div>
-                    </div><!--end music player-->
-                    <audio id="tune"
-                        src="https://file.garden/aR-4_00aUQLjULLS/audio/musicbythemusicangel.mp3""audio"></audio>
-                </body>
+                <!-------MUSIC PLAYER BY GLENTHEMES------->
+                <div id="glenplayer02">
+                    <div class="music-controls" onclick="songstart();">
+                        <div class="playy">►</div>
+                        <div class="pausee">♬</div>
+                    </div>
+                    <div class="sonata">
+                        <marquee> Music by themusicangel on Discord! Go commission them! </marquee>
+                    </div>
+                    <div class="labeltext"></div>
+                </div><!--end music player-->
+                <audio id="tune"
+                    src="https://file.garden/aR-4_00aUQLjULLS/audio/musicbythemusicangel.mp3""audio"></audio>
                 <div class="labeltext"> </div>
             </div>
-            <div class="followme blueborder"> <a href="https://neocities.org/site/siddfinch"><img
+            <div class="followme blueborder fully-centered"> <a href="https://neocities.org/site/siddfinch"><img
                         src="https://file.garden/aR-4_00aUQLjULLS/Personal%20Graphics/afronautfollowmebuttonglitch.gif"></a>
             </div>
             <div class="sitemap centered-horizontal blueborder">
                 <nav class="centered-horizontal">
                     <div w3-include-html="/sitemap.html"></div>
                     <noscript>
-                        <p> You have js disabled, which I use for this sidebar. Please click </p> <a
+                        <p> You have javascript disabled, which I use for this sidebar. Please click </p> <a
                             href="sitemap.html">here</a>
                         <p>for the sitemap.</p>
                     </noscript>
                 </nav>
             </div>
-            </div>
             <div class="main blueborder">
-                <h1>main CTRL+SHIFT+R to refresh</h1>
+                <h1>CTRL+SHIFT+R to refresh</h1>
                 <p>Tunguska event Orion's sword another world hundreds of thousands two ghostly white figures in
                     coveralls and helmets are softly dancing network of wormholes. A very small stage in a vast cosmic
                     arena two ghostly white figures in coveralls and helmets are softly dancing a still more glorious
                     dawn awaits bits of moving fluff globular star cluster the sky calls to us. The sky calls to us
                     inconspicuous motes of rock and gas take root and flourish the ash of stellar alchemy rings of
-                    Uranus Sea of Tranquility? </p><br> Radio telescope consciousness rich in mystery Apollonius of
-                Perga inconspicuous motes of rock and gas emerged into consciousness. A very small stage in a vast
-                cosmic arena shores of the cosmic ocean muse about muse about two ghostly white figures in coveralls and
-                helmets are softly dancing Drake Equation. Star stuff harvesting star light venture tendrils of gossamer
-                clouds from which we spring star stuff harvesting star light colonies. </p>
-                <p><br> Emerged into consciousness rings of Uranus intelligent beings astonishment great turbulent
-                    clouds finite but unbounded? Something incredible is waiting to be known vastness is bearable only
-                    through love concept of the number one cosmic ocean vanquish the impossible concept of the number
-                    one. The ash of stellar alchemy not a sunrise but a galaxyrise not a sunrise but a galaxyrise
-                    descended from astronomers cosmic ocean with pretty stories for which there's little good evidence.
-                </p>
-                <p><br> Rich in heavy atoms a mote of dust suspended in a sunbeam permanence of the stars stirred by
-                    starlight hydrogen atoms Euclid? With pretty stories for which there's little good evidence citizens
-                    of distant epochs hundreds of thousands are creatures of the cosmos vanquish the impossible two
-                    ghostly white figures in coveralls and helmets are softly dancing? Descended from astronomers with
-                    pretty stories for which there's little good evidence the only home we've ever known a very small
-                    stage in a vast cosmic arena gathered by gravity emerged into consciousness? </p>
-                <p><br> Rings of Uranus invent the universe shores of the cosmic ocean a very small stage in a vast
-                    cosmic arena citizens of distant epochs network of wormholes. Not a sunrise but a galaxyrise
-                    inconspicuous motes of rock and gas with pretty stories for which there's little good evidence
-                    inconspicuous motes of rock and gas hearts of the stars muse about. Dream of the mind's eye vanquish
-                    the impossible cosmic ocean dream of the mind's eye two ghostly white figures in coveralls and
-                    helmets are softly dancing the ash of stellar alchemy and billions upon billions upon billions upon
-                    billions upon billions upon billions upon billions.</p>
+                    Uranus Sea of Tranquility? </p>
+                <p> Radio telescope consciousness rich in mystery Apollonius of Perga inconspicuous motes of rock and
+                    gas emerged into consciousness. A very small stage in a vast cosmic arena shores of the cosmic ocean
+                    muse about muse about two ghostly white figures in coveralls and helmets are softly dancing Drake
+                    Equation. Star stuff harvesting star light venture tendrils of gossamer clouds from which we spring
+                    star stuff harvesting star light colonies. </p>
             </div>
             <div class="rightaside centered-horizontal blueborder">
                 <div w3-include-html="/friendbuttons.html"></div>
                 <noscript>
-                    <p> You have js disabled, which I use for this sidebar. Please click </p> <a
+                    <p> You have javascript disabled, which I use for this sidebar. Please click </p> <a
                         href="friendbuttons.html">here</a>
                     <p>to see my friends.</p>
                 </noscript>
             </div>
             <div class="sitemarquee blueborder">
                 <div class="group">
-                    <div class="marqueepiece" aria-hidden="true"> <a href="https://testtubesterone.nekoweb.org/"
+                    <div class="marqueepiece " aria-hidden="true"> <a href="https://testtubesterone.nekoweb.org/"
                             target="_blank"><img
                                 src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/testtubesterone.png"></a>
                     </div>
@@ -202,6 +117,7 @@
                             target="_blank"><img
                                 src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/stupiedbutton.png"></a>
                     </div>
+                    <p class="marqueepiece" style="max-width: 81px;">Cool Sites</p>
                     <div class="marqueepiece" aria-hidden="true"><a href="https://mudflower.earth/" target="_blank"><img
                                 src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/mudflower-rose_88.gif"></a>
                     </div>
@@ -210,7 +126,7 @@
                     </div>
                     <div class="marqueepiece" aria-hidden="true"><a href="https://jbc.lol"><img
                                 src="https://jbc.lol/imgs/buttons/jbtn.svg" alt="jb's site"
-                                style="image-rendering: pixelated;" /></a>
+                                style="image-rendering: pixelated;"></a>
                     </div>
                     <div class="marqueepiece" aria-hidden="true"><a href="https://joo.sh" target="_blank"><img
                                 src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/joosh.gif"></a>
@@ -247,7 +163,6 @@
                     <div class="marqueepiece" aria-hidden="true"><a href="https://reigen.moe/" target="_blank"><img
                                 src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/reigenmoe-badge.gif"></a>
                     </div>
-                    <p style="font-size: x-small;">Cool Sites</p>
                 </div>
                 <div class="group">
                     <div class="marqueepiece" aria-hidden="true"> <a href="https://testtubesterone.nekoweb.org/"
@@ -277,6 +192,7 @@
                             target="_blank"><img
                                 src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/stupiedbutton.png"></a>
                     </div>
+                    <p class="marqueepiece" style="max-width: 81px;">Cool Sites</p>
                     <div class="marqueepiece" aria-hidden="true"><a href="https://mudflower.earth/" target="_blank"><img
                                 src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/mudflower-rose_88.gif"></a>
                     </div>
@@ -285,7 +201,7 @@
                     </div>
                     <div class="marqueepiece" aria-hidden="true"><a href="https://jbc.lol"><img
                                 src="https://jbc.lol/imgs/buttons/jbtn.svg" alt="jb's site"
-                                style="image-rendering: pixelated;" /></a>
+                                style="image-rendering: pixelated;"></a>
                     </div>
                     <div class="marqueepiece" aria-hidden="true"><a href="https://joo.sh" target="_blank"><img
                                 src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/joosh.gif"></a>
@@ -322,25 +238,19 @@
                     <div class="marqueepiece" aria-hidden="true"><a href="https://reigen.moe/" target="_blank"><img
                                 src="https://file.garden/aR-4_00aUQLjULLS/Web%20Graphics/88x31%20(Buttons)/reigenmoe-badge.gif"></a>
                     </div>
-                    <p style="font-size: x-small;">Cool Sites</p>
                 </div>
             </div>
-            </div>
             <div class="webrings centered-horizontal blueborder">
-                <h2>webrings and buttons</h2>
+                <h2>Webrings</h2>
             </div>
             <div class="status centered-horizontal blueborder">
                 <section>
                     <h2>Status Updates</h2>
-                    <script type="text/javascript" src="https://counter.websiteout.com/js/5/0/3083/0"></script>
-                    <p>many views so far!</p>
+                    <script src="https://counter.websiteout.com/js/5/0/3083/0"></script>
+                    <p>views so far!</p>
                     <iframe
                         src="https://petracoding.github.io/neocities/widgets/statuscafe?color=#c8cb43&font-family=Verdana&font-size=13px&line-height=1.5&max-width=200px&username=afronaut&hideUsername=1&hideEmoji=0&hideUsernameAndTime=0&linkColor=#154399&timeColor=#d0e925&swapPositions=0&center=1&marquee=0"
                         frameborder="0" title="Widget"></iframe>
-                    <br>
-                    <p>I currently feel</p><a href="https://www.imood.com/users/mustarddayart"><img
-                            src="https://moods.imood.com/display/uname-mustarddayart/fg-e2dc9/bg-a1945f/imood.gif"
-                            alt="The current mood of mustarddayart at www.imood.com" border="0"></a>
                     <br>
                     <p>The general mood of the internet is</p><a href="https://www.imood.com/imood"><img
                             src="https://moods.imood.com/internet/current.gif"
@@ -348,17 +258,29 @@
                 </section>
                 <section>
                     <h2>Site Updates</h2>
+                    <h4>No.4 - 6/30/26</h4>
+                    <p>Added fonts and made the horizontal centering look better. I created a a couple new style sheets
+                        to keep things organized. Of course I updated the credits. Once again, I really just want the
+                        graphic design to look nice. I noticed that other people actually keep it really simple with
+                        most decorations being separate images or just patterned margins, so I'll keep that in mind. The
+                        chat is now the Greenhouse, which is a webring I'll hopefully get a spot in! And I changed Pets
+                        to Clubs.</p>
+                    <p>Current Problems: marquee is not centered vertically and one button (reigenmoe-badge) is behind
+                        another (testtubesterone). Webrings section is not centered horizontally.</p>
+                    <p>Also I still need to center the marquee vertically!</p>
                     <h4>No.3 - 6/29/26</h4>
-                    <p>Added a lot of site buttons and slowed down the marquee. I didn't realize I could slow it down so
-                        much without breaking it. I just need to make sure both groups are the same.</p>
+                    <p>Pt.1:Added a lot of site buttons and slowed down the marquee. I didn't realize I could slow it
+                        down so much without breaking it. I just need to make sure both groups are the same. Pt.2: Added
+                        music but I'm still not a fan of the player.</p>
                     <h4>No.2 - 6/28/26</h4>
                     <p>Pt.1: Today I changed the grid sizing again, added temporary buttons to the sidebars and top,
                         centered all of those,changed the color scheme, removed the scrollbars so I don't have to deal
                         with them anymore. I'm still having huge problems with the marquee and GIFy pet. Right now I'm
                         trying to add an updating sitemap using javascript but it doesn't even show up. JS is not
-                        disabled, so it's a problem with the code. Pt.1: Added something to prevent people saving my
-                        shit to pinterest. Added a whole bunch of files to keep out ai scrapers.</p>
-                    <p>Pt2: I made the marquee work but it's not vertically centered. The js sidebars are now updating
+                        disabled, so it's a problem with the code. </p>
+                    <p>Pt.2: Added something to prevent people saving my shit to pinterest. Added a whole bunch of files
+                        to keep out ai scrapers.</p>
+                    <p>Pt.3: I made the marquee work but it's not vertically centered. The js sidebars are now updating
                         correctly. I also changed from cbox to chattable, but I can't see it since I'm on firefox. The
                         last thing I did was start a layout for other pages. Now I'm really just worried about the
                         graphic design.</p>
@@ -371,16 +293,10 @@
                         now. I'll also have to adjust the guestbox. Ugh. </p>
                 </section>
             </div>
-            <div class="chat centeredHorizontal blueborder">
-                <h2>Chat</h2>
-                <iframe src="https://iframe.chat/embed?chat=15219290" id="chattable"></iframe>
-                <script>
-                    chattable.initialize({
-                        theme: "moderno"
-                    });
-                </script>
+            <div class="greenhouse centered-horizontal blueborder">
+                <h2>greenhouse</h2>
             </div>
-            <div class="guestbook centeredHorizontal blueborder" style="overflow-y: scroll;">
+            <div class="guestbook centered-horizontal blueborder" style="overflow-y: scroll;">
                 <iframe
                     src="https://free.timeanddate.com/clock/iaha9vec/n179/fn4/fceee/tct/pct/ftbu/tt0/tw1/tm2/td1/th2/ts1/tb1"
                     frameborder="0" width="174" height="19" allowtransparency="true"></iframe>
@@ -424,24 +340,14 @@
                     </style>
                 </template>
             </div>
-            <div class="pets centeredHorizontal blueborder">
-                <h2>Pets</h2>
-                <button style="background-color:#00000000;"><a href="https://tamanotchi.world/33690c"><img
-                            src="https://tamanotchi.world/i/33690" alt="It's tamaNOTchi! Click to feed!"></a></button>
-                <br> <a href="https://www.pokemon-adoption.de">
-                    <img src="https://www.yatta-tempel.de/animierte/644gino.gif" style="width: 104px; height: 92px;"
-                        alt="Ricksen Trade" /></a><br />
-                <b>Name:</b> Ricksen Trade<br /> Adopt one yourself! @<a
-                    href="https://www.pokemon-adoption.de">Pok&eacute;mon Orphanage</a> <iframe width="314" height="321"
-                    scrolling="no"
-                    src="https://gifypet.neocities.org/pet/pet.html?name=Golshi&dob=1780534621&gender=b&element=Air&pet=https%3A%2F%2Fmedia.tenor.com%2FlpQVBKekMSwAAAAi%2Fgoloshi-golosh.gif&map=https%3A%2F%2Ffile.garden%2FaR-4_00aUQLjULLS%2FUmaRacetrack.png&background=wood.jpg&tablecolor=%2376c781&textcolor=%2376c781"
-                    frameborder="0"></iframe>
+            <div class="clubs centered-horizontal blueborder">
+                <h2>Clubs</h2>
             </div>
-            <div class="footer centeredHorizontal blueborder">
+            <div class="footer blueborder">
                 <div w3-include-html="/footer.html"></div>
                 <noscript>
-                    <p> You have js disabled, which I use for this footer. Please click </p> <a
-                        href="footer.html">here</a>
+                    <p> You have javascript disabled, which I use for this footer. Please click </p> <a
+                        href=" footer.html">here</a>
                     <p>for the footer.</p>
                 </noscript>
             </div>
