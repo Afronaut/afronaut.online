@@ -38,8 +38,9 @@
 
 .sonata {
     margin-left: 10px;
-    font-family: chemre;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 14px;
+
     color: #ffffff;
     font-weight: bold;
     text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000, 0 0;

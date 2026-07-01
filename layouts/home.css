@@ -37,11 +37,11 @@ h1 {
 
 
 .layout {
-  width: 100%;
+  width: 100vw;
 
   display: grid;
   grid:
-    "topmargin topmargin topmargin topmargin topmargin topmargin topmargin" 10px "leftmargin banner banner banner banner banner rightmargin" 160px "leftmargin homelogo music music music followme rightmargin" 40px "leftmargin sitemap main main main rightaside rightmargin" 350px "leftmargin sitemarquee sitemarquee sitemarquee sitemarquee sitemarquee rightmargin" 45px "leftmargin status status webrings guestbook guestbook rightmargin" 240px "leftmargin greenhouse greenhouse greenhouse guestbook guestbook rightmargin" 150px "leftmargin greenhouse greenhouse greenhouse clubs clubs rightmargin" 400px "leftmargin footer footer footer footer footer rightmargin" 50px / 1fr 100px 120px 235px 235px 100px 1fr;
+    "topmargin topmargin topmargin topmargin topmargin topmargin topmargin" 10px "leftmargin banner banner banner banner banner rightmargin" 160px "leftmargin homelogo music music music followme rightmargin" 45px "leftmargin sitemap main main main rightaside rightmargin" 350px "leftmargin sitemarquee sitemarquee sitemarquee sitemarquee sitemarquee rightmargin" 45px "leftmargin status status webrings guestbook guestbook rightmargin" 240px "leftmargin greenhouse greenhouse greenhouse guestbook guestbook rightmargin" 150px "leftmargin greenhouse greenhouse greenhouse clubs clubs rightmargin" 400px "leftmargin footer footer footer footer footer rightmargin" 50px / 1fr 100px 120px 235px 235px 100px 1fr;
   gap: 8px;
 }
 
