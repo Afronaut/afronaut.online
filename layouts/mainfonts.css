@@ -83,7 +83,7 @@ a {
   font-size: inherit;
   font-family: inherit;
   display: block;
-  max-height: min-content;
+  max-height: max-content;
 }
 
 

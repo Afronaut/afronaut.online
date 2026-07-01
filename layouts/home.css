@@ -228,8 +228,7 @@ button {
 .marqueepiece {
   display: flex;
   border-color: #e8edff;
-  height: 31px;
-  width: 88px;
+  max-height: max-content;
   padding: 0px 7px 0px 7px;
   text-align: center;
   align-content: center;
