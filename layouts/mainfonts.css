@@ -82,8 +82,8 @@ a {
   color: aqua;
   font-size: inherit;
   font-family: inherit;
-  display: block;
-  max-height: max-content;
+  display: inline-flex;
+
 }
 
 
