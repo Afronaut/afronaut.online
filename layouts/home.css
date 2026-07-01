@@ -227,14 +227,14 @@ button {
 
 .marqueepiece {
   display: flex;
-  flex: 0 0 5em;
   border-color: #e8edff;
   height: 40px;
-  padding: 7px;
+  padding: 0px 7px 0px 7px;
   text-align: center;
   align-content: center;
   justify-content: center;
   align-items: center;
+
 }
 
 @keyframes spin {
