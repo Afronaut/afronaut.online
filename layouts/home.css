@@ -228,7 +228,7 @@ button {
 .marqueepiece {
   display: flex;
   border-color: #e8edff;
-  height: 40px;
+  /* height: 40px; */
   padding: 0px 7px 0px 7px;
   text-align: center;
   align-content: center;
@@ -236,6 +236,14 @@ button {
   align-items: center;
 
 }
+
+a .marqueepiece,
+img .marqueepiece,
+{
+display: block;
+height: auto;
+}
+
 
 @keyframes spin {
   from {
